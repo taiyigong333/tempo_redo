@@ -1,0 +1,20 @@
+{
+  "steps": 6,
+  "latest": {
+    "step": 6,
+    "loss": 1.2548222541809082,
+    "lr": 5.988023952095809e-07,
+    "grad_norm": 0.9402909874916077,
+    "seconds": 14.266329765319824,
+    "samples_per_second": 8.972174490958185,
+    "peak_gib": [
+      61.80275201797485,
+      61.80275201797485
+    ],
+    "sam2_gate_grad": 0.0
+  },
+  "baseline_median_seconds": 14.872600555419922,
+  "micro32_median_seconds_excluding_first": 14.296710014343262,
+  "throughput_gain_percent": 4.028133329268724,
+  "measured_updates_excluding_first": 5
+}

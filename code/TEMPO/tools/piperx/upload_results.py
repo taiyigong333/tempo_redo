@@ -62,9 +62,9 @@ class Publisher:
         self.repo_id = repo_id
         self.token_file = token_file
         self.bundle = self.work / 'bundle'
-        self.prefix = self.config.get('modelscope', {}).get('path_prefix', 'runs/' + self.root.name).strip('/')
+        self.prefix = 'runs/' + self.root.name
         if auxiliary_only:
-            self.prefix += '/auxiliary'
+            self.prefix = self.config.get('auxiliary_upload_prefix', self.prefix + '/auxiliary')
         if self.step is not None:
             self.prefix += f'/policy/step_{self.step:08d}'
 
@@ -86,8 +86,8 @@ class Publisher:
                 return False
             for step in steps:
                 checkpoint = self.root / 'policy' / f'step_{step:08d}'
-                for name in ['model.safetensors', 'model_config.json', 'config.json', 'norm_stats.json', 'split.json'] + [
-                        f'rank_{rank}.pt' for rank in range(len(self.config['gpus']))]:
+                for name in ('model.safetensors', 'rank_0.pt', 'rank_1.pt', 'model_config.json',
+                             'config.json', 'norm_stats.json', 'split.json'):
                     if not (checkpoint / name).is_file() or (checkpoint / name).stat().st_size == 0:
                         return False
             if self.step is None:
@@ -173,13 +173,13 @@ class Publisher:
         readme = '\n'.join([
             '# TEMPO PiperX 全量微调结果', '',
             '本次实验使用全部393条轨迹、44398帧，预测chunk为30。',
-            'π0.5与TEMPO策略全量微调，CUDA '+','.join(map(str,self.config['gpus']))+'，有效batch128，共5000个优化器更新。',
+            'π0.5与TEMPO策略全量微调，CUDA 1、2，有效batch128，共5000个优化器更新。',
             'policy目录保存第' + '、'.join(map(str, checkpoint_steps(self.config)))
-            + '步的完整模型、共享优化器状态与各rank、随机状态及归一化配置。',
+            + '步的完整模型、两rank优化器状态、随机状态及归一化配置。',
             'mvae和decoder目录包含辅助模型，configs、logs和manifest.json记录训练配置、指标与文件校验信息。',
             '本次按用户要求使用全部数据训练，模型评测结果尚未生成。', '',
             '训练代码、日志及配置中的服务器路径保留用于追溯，部署时需要按实际环境调整。',
-            '恢复训练需要匹配原rank数量及兼容的训练环境。', '',
+            '恢复优化器状态需要两卡及兼容的训练环境。', '',
         ])
         (self.bundle / 'README.md').write_text(readme)
         return self.manifest(ready)

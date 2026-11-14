@@ -40,7 +40,6 @@ dependencies = [
     "hydra-core>=1.3.2",
     "iopath>=0.1.10",
     "av==14.4.0",
-    "sam-2",
 ]
 
 
@@ -66,11 +65,7 @@ rlds = [
 [tool.uv]
 override-dependencies = ["ml-dtypes==0.4.1", "tensorstore==0.1.74"]
 
-[tool.uv.extra-build-variables]
-sam-2 = { SAM2_BUILD_CUDA = "0" }
-
 [tool.uv.sources]
-sam-2 = { path = "sam2" }
 # 清华源缺少此版本的 wheel，使用华为源的同版本预编译包，避免依赖系统 FFmpeg 开发库。
 av = { url = "https://mirrors.huaweicloud.com/repository/pypi/packages/f8/9a/8ffabfcafb42154b4b3a67d63f9b69e68fa8c34cb39ddd5cb813dd049ed4/av-14.4.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", marker = "python_version == \"3.11\" and sys_platform == \"linux\" and platform_machine == \"x86_64\"" }
 openpi-client = { workspace = true }

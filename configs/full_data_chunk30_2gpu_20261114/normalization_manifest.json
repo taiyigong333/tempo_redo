@@ -1,0 +1,11 @@
+{
+  "updated_at": "2026-11-14T05:07:25+08:00",
+  "train_episodes": 393,
+  "val_episodes": 0,
+  "frames": 44398,
+  "window": 30,
+  "source": "/data/zhoushuangfan/chuanjun_gong/tempo/data/data11_7/piperx_rotating_red_square",
+  "norm_dir": "/data/zhoushuangfan/chuanjun_gong/tempo/configs/full_data_chunk30_2gpu_20261114/norm",
+  "joint_action_space": "delta_from_window_start_state",
+  "gripper_action_space": "absolute"
+}

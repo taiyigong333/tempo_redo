@@ -1,4 +1,4 @@
-"""tmux内等待所需资源并执行正式训练，持续维护状态与定时巡检日志。"""
+"""tmux内等待两卡独占并执行正式训练，持续维护状态与定时巡检日志。"""
 import argparse
 import csv
 from datetime import datetime, timedelta
@@ -69,10 +69,7 @@ class Pipeline:
         self.last_health = time.monotonic()
         self.micro = self.config['policy']['micro_batch']
         self.env = os.environ.copy()
-        self.env.update(WANDB_ENTITY=self.config['wandb']['entity'],
-                        WANDB_PROJECT=self.config['wandb']['project'],
-                        PALIGEMMA_TOKENIZER_PATH=self.config['tokenizer'],
-                        CUDA_VISIBLE_DEVICES=','.join(map(str, self.config['gpus'])),
+        self.env.update(CUDA_VISIBLE_DEVICES=','.join(map(str, self.config['gpus'])),
                         NPROC_PER_NODE=str(len(self.config['gpus'])), OMP_NUM_THREADS='4',
                         JAX_PLATFORMS='cpu', NO_PROXY='localhost,127.0.0.1',
                         PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True')
@@ -178,13 +175,12 @@ class Pipeline:
                 command += ['--ut-dir', str(self.root/'ut')]
             if (self.root/stage/'last.pt').is_file():
                 command += ['--resume', str(self.root/stage/'last.pt')]
-            command += ['--epochs', str(self.config[stage]['epochs'])]
             return command
         if stage == 'encode':
             return run+['--mvae', str(self.root/'mvae/best.pt'), '--output', str(self.root/'ut')]
         command = run+['--mode', 'formal', '--ut-dir', str(self.root/'ut'),
                        '--decoder', str(self.root/'decoder/best.pt'), '--output', str(self.root/'policy'),
-                       '--steps', str(self.config['policy']['steps']), '--batch', str(self.config['policy']['global_batch']),
+                       '--steps', str(self.config['policy']['steps']), '--batch', '128',
                        '--micro-batch', str(self.micro), '--workers', str(self.config['policy'].get('workers', 2)),
                        '--save-interval', str(self.config['policy'].get('save_interval', 2000)),
                        '--latest-save-interval', str(self.config['policy'].get('latest_save_interval', 100)),
@@ -204,7 +200,7 @@ class Pipeline:
                 (self.root/stage/'latest_status.json').read_text())['state'] == 'completed'
         pointer = json.loads((self.root/'policy/latest.json').read_text())
         checkpoint = Path(pointer['path'])
-        required = ['model.safetensors', 'model_config.json', 'norm_stats.json', 'split.json', ] + [f'rank_{rank}.pt' for rank in range(len(self.config['gpus']))]
+        required = ['model.safetensors', 'model_config.json', 'norm_stats.json', 'split.json', 'rank_0.pt', 'rank_1.pt']
         return pointer['step'] == self.config['policy']['steps'] and all((checkpoint/name).is_file() for name in required)
 
     def recover_outputs(self, stage):
@@ -283,8 +279,7 @@ class Pipeline:
     def run(self):
         try:
             try:
-                if self.config['wandb'].get('native_proxy'):
-                    self.proxy_process, self.proxy = start_proxy(self.config['wandb']['native_proxy'])
+                self.proxy_process, self.proxy = start_proxy(self.config['wandb']['native_proxy'])
                 logging.info('服务器W&B专用出口已就绪 %s', self.proxy)
             except Exception as error:
                 logging.warning('专用出口初始化结果 %s，采用已授权备用出口', type(error).__name__)

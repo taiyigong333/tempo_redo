@@ -1,0 +1,15 @@
+{
+  "status": "awaiting_user_confirmation",
+  "server": "ma800",
+  "gpus": [0, 1, 2],
+  "experiment_root": "/data/zhoushuangfan/chuanjun_gong/tempo/experiments/formal_chunk30_v1",
+  "base_checkpoint": "/data/zhoushuangfan/chuanjun_gong/tempo/caches/pi05_base_pytorch",
+  "dataset": "piperx_rotating_red_square",
+  "split": {"seed": 0, "train_episodes": 314, "val_episodes": 79},
+  "model": {"type": "full_tempo_ut", "finetuning": "full", "action_horizon": 30, "native_action_dim": 7, "ut_dim": 64, "obs_history": 3, "obs_history_stride_s": 0.333, "action_history_steps": 10, "action_history_seconds": 10.0},
+  "policy": {"global_batch": 128, "micro_batch_max": 4, "accumulation": 11, "rank_samples": [43, 43, 42], "updates": 5000, "workers_per_rank": 2, "warmup": 500, "peak_lr": 0.00005, "end_lr": 0.000005, "optimizer": "GPU-sharded FP32-master AdamW", "betas": [0.9, 0.95], "eps": 1e-8, "weight_decay": 1e-10, "clip_norm": 1.0, "compute_precision": "bfloat16", "master_and_moments_precision": "float32", "state_device": "cuda", "cpu_offload": false, "compact_prefix": false, "checkpoint_joint_forward": false, "seed": 42, "save_interval": 1000, "eval_interval": 500, "eval_samples": 128},
+  "mvae": {"epochs": 100, "global_batch": 64, "lr": 0.0001, "weight_decay": 0.0001, "latent_dim": 64, "beta": 0.0, "pool_spatial": true, "window": 30},
+  "decoder": {"epochs": 80, "global_batch": 64, "lr": 0.0001, "weight_decay": 0.0001, "window": 30, "action_dim": 7},
+  "wandb": {"entity": "gongcj-beijing", "project": "tempo-piperx-ma800", "mode": "online", "proxy": "http://127.0.0.1:17891"},
+  "timing": {"measured_policy_step_seconds": 29.419639587402344, "estimated_policy_hours": 40.86061053805881, "estimated_total_hours_range": [42, 50], "resource_condition": "shared GPUs with approximately 40GiB other-user allocations per GPU"}
+}

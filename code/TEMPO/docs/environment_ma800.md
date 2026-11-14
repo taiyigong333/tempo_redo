@@ -70,3 +70,8 @@ SAM2 权重 SHA-256 为 `7402e0d864fa82708a20fbd15bc84245c2f26dff0eb43a4b5b93452
 ## 2026-11-14 TEMPO训练准备更新
 
 W&B固定为0.24.2以支持新版密钥，uv sync --locked和uv pip check通过，243个包兼容。数据已完成全量验证，基座已转PyTorch，SAM2缓存与三卡短测完成。正式方案、时长与结果见项目根docs/实验方案.md和docs/test_report.json，最新状态见项目根handoff.md，独立代码修改见tempo_code_changes.md。正式训练等待用户确认。
+
+
+## 2026-11-14 两卡全量正式任务
+
+用户已授权CUDA1、2独占训练，全部393条轨迹参与，完整执行方案在项目根docs/两卡全量训练执行方案.md。归一化新版本在configs/full_data_chunk30_2gpu_20261114/norm。tmux会话tempo_chunk30_2gpu_20261114已启动监督程序，每10分钟等待显卡、每30分钟健康巡检，状态runtime/latest_status.json，W&B服务器专用出口127.0.0.1:17892已核验账户连接。

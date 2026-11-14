@@ -142,7 +142,7 @@ def main():
         output.mkdir(parents=True, exist_ok=True)
         if (output/'metrics.jsonl').exists() and not args.resume:
             raise FileExistsError('已有训练指标需要恢复或使用独立目录')
-        run = wandb.init(project=os.environ.get('WANDB_PROJECT', 'tempo-piperx-ma800'), name=output.name, group=output.parent.name,
+        run = wandb.init(project='tempo-piperx-ma800', name=output.name, group=output.parent.name,
                          config={'stage': args.stage, 'epochs': epochs, 'batch': 64, 'lr': 1e-4,
                                  'window': 30, 'latent_dim': 64, 'beta': 0, 'test_only': bool(args.test_steps),
                                  'train_episodes': len(split['train_episodes']), 'validation_episodes': len(split['val_episodes']),

@@ -42,12 +42,9 @@ def save_checkpoint(model, optimizer, output, step, settings, rank):
     previous = None
     if rank == 0 and (output / 'latest.json').is_file():
         previous = json.loads((output / 'latest.json').read_text())
-    # DDP各rank持有相同的标准AdamW状态，只保存一份以降低周期性落盘成本。
-    state = {'checkpoint_format_version': 2, 'optimizer_state_rank': 0, 'step': step,
+    state = {'optimizer': cpu_tree(optimizer.state_dict()), 'step': step,
              'torch_rng': torch.get_rng_state(), 'cuda_rng': torch.cuda.get_rng_state(),
              'numpy_rng': np.random.get_state(), 'python_rng': random.getstate(), 'settings': settings}
-    if rank == 0:
-        state['optimizer'] = cpu_tree(optimizer.state_dict())
     torch.save(state, temp / f'rank_{rank}.pt')
     if rank == 0:
         safetensors.torch.save_model(model, temp / 'model.safetensors')
@@ -114,7 +111,7 @@ def main():
             raise ValueError('正式训练需要正式30帧MVAE标签')
         if args.decoder is None or not args.decoder.is_file():
             raise ValueError('正式训练需要正式decoder检查点')
-    os.environ.setdefault('PALIGEMMA_TOKENIZER_PATH', str(project.parent / 'base_model/pi0.5_base/paligemma_tokenizer.model'))
+    os.environ['PALIGEMMA_TOKENIZER_PATH'] = str(project.parent / 'base_model/pi0.5_base/paligemma_tokenizer.model')
     device = torch.device('cuda', int(os.environ['LOCAL_RANK']))
     torch.cuda.set_device(device)
     dist.init_process_group('nccl', device_id=device)
@@ -136,7 +133,7 @@ def main():
     run = None
     if rank == 0:
         id_path = output / 'wandb_id.txt'
-        run = wandb.init(project=os.environ.get('WANDB_PROJECT', 'tempo-piperx-ma800'), name=output.name, mode=args.wandb_mode,
+        run = wandb.init(project='tempo-piperx-ma800', name=output.name, mode=args.wandb_mode,
                          group=output.parent.name, config=settings,
                          id=id_path.read_text().strip() if args.resume and id_path.exists() else None,
                          resume='must' if args.resume and id_path.exists() else None, dir=str(output))
@@ -186,12 +183,7 @@ def main():
         state = torch.load(args.resume / f'rank_{rank}.pt', map_location='cpu', weights_only=False)
         if state['settings']['batch'] != args.batch or state['settings']['world_size'] != world:
             raise ValueError('恢复时保持全局 batch 与 rank 数一致')
-        # 兼容历史逐rank完整状态，以及新格式的共享优化器快照。
-        optimizer_state = state.get('optimizer')
-        if optimizer_state is None:
-            optimizer_state = torch.load(args.resume / 'rank_0.pt', map_location='cpu', weights_only=False)['optimizer']
-        optimizer.load_state_dict(optimizer_state)
-        del optimizer_state
+        optimizer.load_state_dict(state['optimizer'])
         start_step = state['step']
         torch.set_rng_state(state['torch_rng'])
         torch.cuda.set_rng_state(state['cuda_rng'])
@@ -268,7 +260,7 @@ def main():
         if args.verify_action_shape and step+1 == args.steps:
             if rank == 0:
                 from torch.utils.data import default_collate
-                sample = default_collate([(validation if validation is not None else dataset)[50]])
+                sample = default_collate([validation[50]])
                 sample.pop('sample_weight')
                 sample = jax.tree.map(lambda x: x.to(device), sample)
                 model.eval()
