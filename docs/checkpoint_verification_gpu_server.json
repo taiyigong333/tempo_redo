@@ -1,0 +1,7 @@
+{
+  "world_size": 4,
+  "rolling_snapshot_pruning": true,
+  "milestone_retained": true,
+  "shared_optimizer_restore_next_update_exact": true,
+  "atomic_latest_pointer": true
+}

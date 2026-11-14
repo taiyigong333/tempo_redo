@@ -1,0 +1,37 @@
+{
+  "test_only": true,
+  "world_size": 4,
+  "gpus": [
+    3,
+    4,
+    6,
+    7
+  ],
+  "global_batch": 128,
+  "micro_batch": 32,
+  "accumulation": 1,
+  "steps": [
+    1,
+    2,
+    3
+  ],
+  "full_checkpoint_saved_at_step": 2,
+  "resumed_to_step": 3,
+  "losses": [
+    1.1856435537338257,
+    1.1940665245056152,
+    1.2228201627731323
+  ],
+  "seconds_per_update": [
+    14.415284156799316,
+    13.603474617004395,
+    14.606096267700195
+  ],
+  "peak_allocated_gib": 61.80275201797485,
+  "checkpoint_timing": {
+    "seconds": 28.036162100732327,
+    "path": "/data-minio/taiyi/tempo/experiments/setup_smoke/policy/step_00000002"
+  },
+  "resource_condition": "formal MVAE running concurrently on the same GPUs",
+  "wandb_url": "https://wandb.ai/gongcj-beijing/tempo-piperx-gpu-server/runs/h1ksq8v1"
+}

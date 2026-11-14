@@ -1,0 +1,38 @@
+{
+  "batch1_baseline_loss": 1.3625928163528442,
+  "batch1_layer_only_loss": 1.3625928163528442,
+  "loss_exact": true,
+  "gradient_tensors_compared": 830,
+  "different_gradient_tensors": [],
+  "cuda_rng_exact": true,
+  "cpu_rng_exact": true,
+  "model_source_modified": false,
+  "batch32_benchmarks": [
+    {
+      "outer_checkpoint": true,
+      "seconds": 12.31216465588659,
+      "peak_allocated_gib": 48.125128746032715,
+      "loss": 1.628638505935669
+    },
+    {
+      "outer_checkpoint": false,
+      "oom": true
+    },
+    {
+      "outer_checkpoint": true,
+      "seconds": 11.273705336730927,
+      "peak_allocated_gib": 48.12013101577759,
+      "loss": 1.628638505935669
+    },
+    {
+      "outer_checkpoint": false,
+      "oom": true
+    }
+  ],
+  "resource_condition": "formal MVAE running concurrently on GPU 3",
+  "numerical_equivalence_passed": true,
+  "batch32_memory_budget_passed": false,
+  "selected_for_formal_training": false,
+  "policy_memory_target_fraction": 0.8,
+  "memory_target_applies_to": "policy_only"
+}

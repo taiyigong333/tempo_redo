@@ -1,0 +1,1918 @@
+{
+  "archive/runtime/paper_restore_chunk30_2gpu_20261114/auxiliary_load_verification.json": {
+    "sha256": "17607b635afe8c0fcc20dfd2c84bb0e1576b1f7c1880742bcd59cc21d72c38d8",
+    "bytes": 660
+  },
+  "archive/runtime/paper_restore_chunk30_2gpu_20261114/manual_recovery_guard.py": {
+    "sha256": "531a757483ddee8f1d896ba3bc6f430b57f662d513ad799f825998c8ba6acceb",
+    "bytes": 779
+  },
+  "archive/runtime/paper_restore_chunk30_2gpu_20261114/micro32_verification.json": {
+    "sha256": "d0f5881979987423c8ec040a6c094a738315047fbb81f83df943de068393d54f",
+    "bytes": 534
+  },
+  "archive/runtime/paper_restore_chunk30_2gpu_20261114/verify_adamw.py": {
+    "sha256": "bae08adb98ee7b8c5ee81198b8aab3ba6ce43cff2a5c346eac45e2cdea8ad619",
+    "bytes": 1192
+  },
+  "archive/runtime/paper_restore_chunk30_2gpu_20261114/verify_rolling_shared.py": {
+    "sha256": "618d40ff09a642bc2cb9818109d35db61c6e759cf5c41bc10af54d60ba6eb92f",
+    "bytes": 3842
+  },
+  "code/TEMPO/.gitignore": {
+    "sha256": "20a9716ea75679df43e6decc2f968e37e736c6ae95e5f400182353c39374b83c",
+    "bytes": 3194
+  },
+  "code/TEMPO/.python-version": {
+    "sha256": "bb0635f951bfd55419a47fc08a859192049b4d0949cf2d09a4d4d6b2cafafb94",
+    "bytes": 4
+  },
+  "code/TEMPO/LICENSE": {
+    "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1",
+    "bytes": 11356
+  },
+  "code/TEMPO/LICENSE_GEMMA.txt": {
+    "sha256": "3e2c24001f9ef57bf7ec959a3658fbb49cdad113cdf394c264da9d16f9bdd132",
+    "bytes": 8431
+  },
+  "code/TEMPO/README.md": {
+    "sha256": "0aa526d26fc4811b76541d515639ffedabbd3ae042cddc22e050b2df4349409c",
+    "bytes": 8225
+  },
+  "code/TEMPO/docs/docker.md": {
+    "sha256": "5f6180bf09f1eed5c3705cf7e08536b7fd5d4f75b3ba0d938b932eff73ce4053",
+    "bytes": 1989
+  },
+  "code/TEMPO/docs/environment_ma800.md": {
+    "sha256": "5540444a5ad96f0f8f0c45a2ed06cbdfb889fd95bd846c5e90e72092b5dd4466",
+    "bytes": 4739
+  },
+  "code/TEMPO/docs/norm_stats.md": {
+    "sha256": "62e4a39ea7fcdae53b4466942db348c3e38fc016b7f7a5273cafed649ebe614b",
+    "bytes": 5245
+  },
+  "code/TEMPO/docs/remote_inference.md": {
+    "sha256": "5b62754525100f958a1bb5bcd0f5ea406c8d120e582c4785742072ccef79e24c",
+    "bytes": 3601
+  },
+  "code/TEMPO/examples/convert_jax_model_to_pytorch.py": {
+    "sha256": "6e95bdf15624d89d300ff7c3e6f0c39f9e2865c13a6ba87a12f6ba624ef8eb99",
+    "bytes": 27460
+  },
+  "code/TEMPO/examples/simple_client/Dockerfile": {
+    "sha256": "fac5ee3a4b2ab753f3b2f0251e3c1a054b6cbf7edb7934b1e9eb3f5943722bcf",
+    "bytes": 1256
+  },
+  "code/TEMPO/examples/simple_client/README.md": {
+    "sha256": "226a47bce1b8ad74967552cbe42afb711076b48b18a6cc36555cc5f60627e3a6",
+    "bytes": 589
+  },
+  "code/TEMPO/examples/simple_client/compose.yml": {
+    "sha256": "545424c7c0d6ded3179f16ccb680f88931e82c74c27add2a35aa4b5f83c655fa",
+    "bytes": 968
+  },
+  "code/TEMPO/examples/simple_client/main.py": {
+    "sha256": "3f4445762376cfa25ce0812ecaacc225f4ddc7d2ab66d219563d6150803c6767",
+    "bytes": 6281
+  },
+  "code/TEMPO/examples/simple_client/requirements.in": {
+    "sha256": "1dd6cf5d680303d89414c7d4dd091bb8b0362a497c779982b3f30e745b018e83",
+    "bytes": 42
+  },
+  "code/TEMPO/examples/simple_client/requirements.txt": {
+    "sha256": "87be8497bb0b14a910f8430c9dd18921d0a75c950610fb4b9de0adbb67cf216b",
+    "bytes": 810
+  },
+  "code/TEMPO/packages/openpi-client/pyproject.toml": {
+    "sha256": "00e8cb0e589d8f473588528f271f780fbe20cb67ba778e3e827d30cc3eb6cc92",
+    "bytes": 410
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/__init__.py": {
+    "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+    "bytes": 22
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/action_chunk_broker.py": {
+    "sha256": "019b9d69cb26cc681331a2f95dbe60a2cc7b02d6d309c5d15b6457ab39798234",
+    "bytes": 1404
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/base_policy.py": {
+    "sha256": "88e98e0f06293f3c4767db675061664c4bba12f87242ba1e64377d1b8de8069e",
+    "bytes": 271
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/image_tools.py": {
+    "sha256": "d48b4bd7f44e79fe6db8a8e07c9161144fa250be686e1245014a8b47e6171977",
+    "bytes": 2426
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/image_tools_test.py": {
+    "sha256": "4df4b0ba0b95ba5e47160039c3e837a64d50c802b419a588211dffbaa732589c",
+    "bytes": 1411
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/msgpack_numpy.py": {
+    "sha256": "c04568948fcee52b691e3be4b6cffb759f7e79ad67530fcd5d23095a0d13c057",
+    "bytes": 1944
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/msgpack_numpy_test.py": {
+    "sha256": "2c6dd236720dae716d7bdf842b7d506a165e9563bf9d4376c95289269adcb973",
+    "bytes": 1643
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/runtime/agent.py": {
+    "sha256": "b559885afd9645a91b9b6ee12a28513295474f987d11b16610fc0479dbe6de5b",
+    "bytes": 465
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/runtime/agents/policy_agent.py": {
+    "sha256": "c4d63952d1954bd4b72a3122223df36794812fea74cf1c7023433b5a90473c1c",
+    "bytes": 509
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/runtime/environment.py": {
+    "sha256": "1c12e5054b3401dec5f1f8b71eef0f625cb60e2b50784dcf19afa32c77107a7e",
+    "bytes": 1044
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/runtime/runtime.py": {
+    "sha256": "3daa242a9ce61ffb210789ef3ba6b1e3cade9de757fcd36af7b174c530345ea8",
+    "bytes": 3049
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/runtime/subscriber.py": {
+    "sha256": "d269a2af8ec4056beb310e5c3c97d4468af01549c7ef80dd905652d8ac64f85b",
+    "bytes": 500
+  },
+  "code/TEMPO/packages/openpi-client/src/openpi_client/websocket_client_policy.py": {
+    "sha256": "29386003b1e9deb9fe9acbb703611f8e572cbe0acfe527eed6fb79a8a02787ac",
+    "bytes": 2450
+  },
+  "code/TEMPO/pyproject.toml": {
+    "sha256": "9af53a4f8ec73375e6f32c3ce52c7507f09a2cb18a4ffc5d9cb990b3261f36d6",
+    "bytes": 3606
+  },
+  "code/TEMPO/sam2/.clang-format": {
+    "sha256": "08d5e160d13b81a0c000165340447a620ce0ac7a52846289355cbb1abfe4f54c",
+    "bytes": 2544
+  },
+  "code/TEMPO/sam2/.github/workflows/check_fmt.yml": {
+    "sha256": "3cec2b487a8676aa17ca374df09e0dd6d092cc61d80228c973f6c1c1ec8b923e",
+    "bytes": 373
+  },
+  "code/TEMPO/sam2/.gitignore": {
+    "sha256": "6d51c009707c6c5f6a1a029c2889060b76c1c07bff057c7b3dfc4f8a962975b2",
+    "bytes": 134
+  },
+  "code/TEMPO/sam2/.watchmanconfig": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2
+  },
+  "code/TEMPO/sam2/CODE_OF_CONDUCT.md": {
+    "sha256": "d4d00a8ac00c1735cd2f3fb50ca67c83960ef9123fc5656f2e69056c905ed244",
+    "bytes": 3541
+  },
+  "code/TEMPO/sam2/CONTRIBUTING.md": {
+    "sha256": "23598bb7ac5d26d066b5b059abb6258fdd03f852a47ac46ee33afe287d2e9af1",
+    "bytes": 1425
+  },
+  "code/TEMPO/sam2/INSTALL.md": {
+    "sha256": "3295dc994038232f8e90b3123996d4bb087570ce7c10eb5da91a37cccada48aa",
+    "bytes": 10583
+  },
+  "code/TEMPO/sam2/LICENSE": {
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "bytes": 11357
+  },
+  "code/TEMPO/sam2/LICENSE_cctorch": {
+    "sha256": "687d4f65ffe399358b170e22572564a16689e496f85a79dc5385fccf6bbc9558",
+    "bytes": 1566
+  },
+  "code/TEMPO/sam2/MANIFEST.in": {
+    "sha256": "969fc588abbd8d84b1e2b055eafd46573a317647d86c796a1e062983e17f9f33",
+    "bytes": 254
+  },
+  "code/TEMPO/sam2/README.md": {
+    "sha256": "eea69ee1042fb30933c5ca5019fbf0f6f9366cec5e792109281b5023a4f1589c",
+    "bytes": 16249
+  },
+  "code/TEMPO/sam2/RELEASE_NOTES.md": {
+    "sha256": "5684b9c0346f81ea1c106e5e9b661bd48cde8a3f8dd842e43c449630d4cfa2b2",
+    "bytes": 3843
+  },
+  "code/TEMPO/sam2/backend.Dockerfile": {
+    "sha256": "4e7863d40b06fa33b446da790d40ee01e08d2b066297c6e8d17094a05ec9756c",
+    "bytes": 2069
+  },
+  "code/TEMPO/sam2/demo/.gitignore": {
+    "sha256": "fccd4c6900952d29980901697c3c60d946d0bc9507d209b60872d2a6712304c9",
+    "bytes": 26
+  },
+  "code/TEMPO/sam2/demo/README.md": {
+    "sha256": "7cae4abc8d11c440dad473fe216ae301f6ecab7f04ee4751f8be7610e8d08764",
+    "bytes": 4797
+  },
+  "code/TEMPO/sam2/demo/backend/server/app.py": {
+    "sha256": "b0d7ecb6ab8d200b04a21586d237a5b78de1d546a3302e8a47a772e4dfce3e70",
+    "bytes": 4070
+  },
+  "code/TEMPO/sam2/demo/backend/server/app_conf.py": {
+    "sha256": "9fd0a3b9668b7b28a3a31eb9fd952679fcc6806cf13cff75bfa77589e51ee2cf",
+    "bytes": 1587
+  },
+  "code/TEMPO/sam2/demo/backend/server/data/data_types.py": {
+    "sha256": "7e054c91787c2c9b46cb5f154c2e8f577b88a9187fa35df5744afdc8ecdc5913",
+    "bytes": 2733
+  },
+  "code/TEMPO/sam2/demo/backend/server/data/loader.py": {
+    "sha256": "4ebd83186e26d5bb07803df309dfd5cb5c2aac4f0de586f9a13326cd2c4ef2c1",
+    "bytes": 2908
+  },
+  "code/TEMPO/sam2/demo/backend/server/data/resolver.py": {
+    "sha256": "10d2eec01071568abee8a0600c8b909ef6340c41f9576fc92bfc1817521b29b9",
+    "bytes": 522
+  },
+  "code/TEMPO/sam2/demo/backend/server/data/schema.py": {
+    "sha256": "d89f9b768e5b9d44ee3965738ed72fd845ad93f319ce4572887dd757d7500482",
+    "bytes": 11109
+  },
+  "code/TEMPO/sam2/demo/backend/server/data/store.py": {
+    "sha256": "e029102cb48d10ad9b43f4c2e00b457ac0264d1e6a9ec397441a9494b17bd950",
+    "bytes": 796
+  },
+  "code/TEMPO/sam2/demo/backend/server/data/transcoder.py": {
+    "sha256": "8f4b943b8b86beb159217a95815e7898a461152810c8cf170de1245b7fcafbb0",
+    "bytes": 5205
+  },
+  "code/TEMPO/sam2/demo/backend/server/inference/data_types.py": {
+    "sha256": "f977f45402248c44bed38044371cc42cffa8e213b1bd7b81f532bd6cd399cd8b",
+    "bytes": 3060
+  },
+  "code/TEMPO/sam2/demo/backend/server/inference/multipart.py": {
+    "sha256": "d47cd8e6990063e460ccbba69cfc0a4a39e52560be93e4bb71b6a1c9d2aaf470",
+    "bytes": 1593
+  },
+  "code/TEMPO/sam2/demo/backend/server/inference/predictor.py": {
+    "sha256": "5a084d3182d3ce7407ebd2e523cc43fbbf598c35738f02c897c6e06d8a8c8fbb",
+    "bytes": 17062
+  },
+  "code/TEMPO/sam2/demo/frontend/.babelrc": {
+    "sha256": "d42cf5a9fc2c0bb9e240b4d50c19cec5e86cce533881bdadb72e0f2098ee8573",
+    "bytes": 102
+  },
+  "code/TEMPO/sam2/demo/frontend/.dockerignore": {
+    "sha256": "f676bbb5c3b2f73440e3035f078d52117a834145474850dcd1775ede48d1392a",
+    "bytes": 357
+  },
+  "code/TEMPO/sam2/demo/frontend/.eslintignore": {
+    "sha256": "a548252183aeb3ee3d1c35e5187a79dd2b9ef5f5da32483453225617aadc32ef",
+    "bytes": 28
+  },
+  "code/TEMPO/sam2/demo/frontend/.eslintrc.cjs": {
+    "sha256": "3b164b3014f727bf37b77a04e5aa402b15676f4f4dff37ac627dadd4732eeb91",
+    "bytes": 1714
+  },
+  "code/TEMPO/sam2/demo/frontend/.gitignore": {
+    "sha256": "f676bbb5c3b2f73440e3035f078d52117a834145474850dcd1775ede48d1392a",
+    "bytes": 357
+  },
+  "code/TEMPO/sam2/demo/frontend/.prettierignore": {
+    "sha256": "c2cd02306ac5c8f0b88e6f5260073bb48cfad088fe53fdd7da3b9ed9fee7d792",
+    "bytes": 19
+  },
+  "code/TEMPO/sam2/demo/frontend/.prettierrc.json": {
+    "sha256": "a32c49e671e9bcf43bac292b3f15f9a23b4b21d10eb481f21495006d6e11d48b",
+    "bytes": 171
+  },
+  "code/TEMPO/sam2/demo/frontend/.watchmanconfig": {
+    "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "bytes": 3
+  },
+  "code/TEMPO/sam2/demo/frontend/frontend.Dockerfile": {
+    "sha256": "a8e68518a7c5403dfa5760b084a24fd99335cc7ba54711fcf6122e3ce2366ba5",
+    "bytes": 531
+  },
+  "code/TEMPO/sam2/demo/frontend/index.html": {
+    "sha256": "6ffd168606278cee9aad355f1f5236a7a10fa16234fa29d6cd71d44540f3df46",
+    "bytes": 342
+  },
+  "code/TEMPO/sam2/demo/frontend/package.json": {
+    "sha256": "af7f83f137951342074129af99e0a8bef9a16656a09ad19a8a7531eeeada4848",
+    "bytes": 3012
+  },
+  "code/TEMPO/sam2/demo/frontend/postcss.config.js": {
+    "sha256": "42b64f0ad487811c622499f3d6deed8593e6a76acf7846757fdee03acb208329",
+    "bytes": 758
+  },
+  "code/TEMPO/sam2/demo/frontend/public/fonts/Inter-VariableFont_opsz,wght.ttf": {
+    "sha256": "0be2399ea925f1f83ff974764761da9860ec50742ed29a5d4c1ffd0c5c7ac3a8",
+    "bytes": 874708
+  },
+  "code/TEMPO/sam2/demo/frontend/schema.graphql": {
+    "sha256": "793f988eae5f33a091e87c2f668e1b50af4d98f900b8b4e45f346c3b714f19bc",
+    "bytes": 4039
+  },
+  "code/TEMPO/sam2/demo/frontend/schemas/inference-api-schema.graphql": {
+    "sha256": "1ae4b6ef5916f9ca7d6268a84ecf650f2f69ffd4c5ddeff347dade67dce1d0aa",
+    "bytes": 2152
+  },
+  "code/TEMPO/sam2/demo/frontend/schemas/merge-schemas.ts": {
+    "sha256": "501279569a15243e72f8cb7f0e60b0f925081a82edf3212368764352c1dbe000",
+    "bytes": 1264
+  },
+  "code/TEMPO/sam2/demo/frontend/schemas/video-api-schema.graphql": {
+    "sha256": "f2523481fc4e3efae7ebfc1c9cb6b193c5abf9109c0ee717200fd9ffbc6e19af",
+    "bytes": 3079
+  },
+  "code/TEMPO/sam2/demo/frontend/src/App.tsx": {
+    "sha256": "df34badce2991ec0e6795f5e20355343c52346cb827b3b7fb6b5366454083b69",
+    "bytes": 1087
+  },
+  "code/TEMPO/sam2/demo/frontend/src/assets/scss/App.scss": {
+    "sha256": "fd4aadb255466898c91f08e00fe9a6f6cdedddb45251a0195ea59f0e488ecaf7",
+    "bytes": 6304
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/codecs/VideoDecoder.ts": {
+    "sha256": "95b5d1aa1d693867f711efb6f8f3e4d8600f30ceb1e03cb3062d8b182c245c90",
+    "bytes": 9254
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/codecs/VideoEncoder.ts": {
+    "sha256": "9a366b2f55673dad71d3c16d3692202aa136f69b3c4d21698125658673af8ef5",
+    "bytes": 4671
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/codecs/WebCodecUtils.ts": {
+    "sha256": "3f7d8829575c5255b2cc208cb1fe81180ab39387d8225b829091bc49221a4219",
+    "bytes": 1690
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/MobileFirstClickBanner.tsx": {
+    "sha256": "c9d586190d1fdb4839e8ad95887d4f9904bafdfe21ddeed7e69f9a5fa5c6694a",
+    "bytes": 2222
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/Tooltip.tsx": {
+    "sha256": "8116fefb029138ad06478c21a614a1a164c2929e139ea17fc8b33665b1b2f634",
+    "bytes": 1180
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/AddObjectButton.tsx": {
+    "sha256": "1143e0d66349460535a49e223cb9078a4c2626e03edc5eb473c9fa396c7e4905",
+    "bytes": 1968
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/ClearAllPointsInVideoButton.tsx": {
+    "sha256": "46555c3733df99de7d8fe6637a946620e3dcb453956b6029155a06d19685e485",
+    "bytes": 2492
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/CloseSessionButton.tsx": {
+    "sha256": "10a6333ff9c336352b277af3074fe2be2bc117bf8f09d0a8fc179d1b51523ef8",
+    "bytes": 1216
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/FirstClickView.tsx": {
+    "sha256": "18503dff314222feb418d8da30c996f49f4555023aaa14a32a56fa9357caa917",
+    "bytes": 1794
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/LimitNotice.tsx": {
+    "sha256": "b4000cfdd6b70c0c3dc5e63df6e51e49cf8a1548e47ae8eedcb9af22c84ec7e1",
+    "bytes": 1050
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/MobileObjectsList.tsx": {
+    "sha256": "8f59dc1466b8925238995be5f63a2f0935145f3657525299d23fc30241261072",
+    "bytes": 2442
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/MobileObjectsToolbar.tsx": {
+    "sha256": "45224b2ac6bf769970718612058a2d43ee36d39fc1b698dcf4da82a48c38f176",
+    "bytes": 1876
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/MobileObjectsToolbarHeader.tsx": {
+    "sha256": "108e43cbf2f8b266640d35bef8e42915923c669ceea110d8ae532143a287fb1c",
+    "bytes": 1672
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/ObjectActions.tsx": {
+    "sha256": "d10669b84a3068265f10cc4a43cd8dc54d0c489a8e946f39c11eb73913111673",
+    "bytes": 3441
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/ObjectPlaceholder.tsx": {
+    "sha256": "c2ec31c9b58215b14f979b665f48bde84841c314bfde4cc72aade6f6d0f4e6a1",
+    "bytes": 1438
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/ObjectThumbnail.tsx": {
+    "sha256": "cfda7d7fb930f3b37ccdb9937e6f9287ad4a0470806731def6535230f0821e7a",
+    "bytes": 1207
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/ObjectUtils.ts": {
+    "sha256": "b86d6381868ed1b1089d836952083cada950480243aef2aa7e4c96625326ec26",
+    "bytes": 773
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/ObjectsToolbar.tsx": {
+    "sha256": "fb28fca13f122c56dba9414f67e6dc06800ea5fe9ccbe013ba45c2565e51f557",
+    "bytes": 2754
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/ObjectsToolbarBottomActions.tsx": {
+    "sha256": "068f7f4a7f06dcc0bd3fedb1a4b648290a4efc9f59a7b308d5cfae4be4588f32",
+    "bytes": 1916
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/ObjectsToolbarHeader.tsx": {
+    "sha256": "f86fe448841a003ce772da01dc9dbf59eab09c78551900575c4008c0709e0437",
+    "bytes": 1767
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/PointsToggle.tsx": {
+    "sha256": "eeca0af1948ede07874349c95d34540f19b38b00736083fd782cd6cc014843b7",
+    "bytes": 1755
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/PrimaryCTAButton.tsx": {
+    "sha256": "186fc207da0202a6a0328fb42263d2567f417ff4c78009d7f9573f90029171aa",
+    "bytes": 1229
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/ToolbarObject.tsx": {
+    "sha256": "f91e42bf10c41ee3eb6b808906b3d5c913914aea80a23ea4c6b0de0e1b0b2828",
+    "bytes": 2688
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/ToolbarObjectContainer.tsx": {
+    "sha256": "1a332488260cfc3d29d0ca60d0776bcb29d99dfe790733b1d394a278b3acd964",
+    "bytes": 3209
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/TrackletSwimlane.tsx": {
+    "sha256": "e2d2ee9f02a0c966debc7f28a87b2f423dd59873bb01ca66b7c9c1f61787ff92",
+    "bytes": 4492
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/TrackletsAnnotation.tsx": {
+    "sha256": "8813e59d4de4c4256f72ca7dcbafa5c82d43183e61a7686960a9295236c723f4",
+    "bytes": 1691
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/annotations/useTracklets.ts": {
+    "sha256": "cb55cef1e9ffce136a5793d9560c5d08232e37fcf59f54d6dca3d101e9e25013",
+    "bytes": 794
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/button/GradientBorder.tsx": {
+    "sha256": "b470e124131cf2d2d6138365d7ae7a13d315ed287b48e48eb2223e1b0356dcf5",
+    "bytes": 1977
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/button/PlaybackButton.tsx": {
+    "sha256": "43362d2483e373717af7522bf6385699718eb15c8d861eaa65d54cdcf04bcecf",
+    "bytes": 2859
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/button/PrimaryCTAButton.tsx": {
+    "sha256": "186fc207da0202a6a0328fb42263d2567f417ff4c78009d7f9573f90029171aa",
+    "bytes": 1229
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/button/ResponsiveButton.tsx": {
+    "sha256": "cbae86e4abcee97796c4342ade87c2b2238493f67df675a1d8fd5afce884aae8",
+    "bytes": 1022
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/button/TrackAndPlayButton.tsx": {
+    "sha256": "5e588786b7f607d33f18cddc74160e5b65221c606ab11cccc2123a8300f272e4",
+    "bytes": 4068
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/code/InitializeLocalMonaco.ts": {
+    "sha256": "7b62b85529fa49bca3cd79d277136eb5991a089c0b15ae49efc95da50605a71d",
+    "bytes": 1205
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/BackgroundEffects.tsx": {
+    "sha256": "dac39454a36257a24ad954b9e732647ebb208b74037fabe30a403c9667436ebd",
+    "bytes": 2476
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/EffectVariantBadge.tsx": {
+    "sha256": "7faaaf35aae6acb269b56fc52086abf1cd601e705d25efa48445661dc2311933",
+    "bytes": 1200
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/EffectsCarousel.tsx": {
+    "sha256": "0a8984fc8a6a5da5cb831cd21052e2d15041daf344d8c1591030216ed39ebcfc",
+    "bytes": 2999
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/EffectsCarouselShadow.tsx": {
+    "sha256": "e2a89a6f3544ff0d6dd23a89c610c9b07f894188115e0be3dd1481ecd7a10d5f",
+    "bytes": 1389
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/EffectsToolbar.tsx": {
+    "sha256": "6fe5e37cb9ce223d626cfcdfcdac36857f6541958616bf59cf2970c1c1822e67",
+    "bytes": 1774
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/EffectsToolbarBottomActions.tsx": {
+    "sha256": "d097e3fbc0d63ea7d73990ab05606dbc1f678ee50cc9354667729e1661ed659b",
+    "bytes": 1615
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/EffectsToolbarHeader.tsx": {
+    "sha256": "09e8392d8f2a1e5a79f4beb98066cca8a55afae15917c8961095313f9f9ad17d",
+    "bytes": 2235
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/EffectsUtils.ts": {
+    "sha256": "08e4481ecfdf8178fe48ff04c86960f41d4137b9e115b6251049157a59185ab1",
+    "bytes": 2330
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/HighlightEffects.tsx": {
+    "sha256": "b5998e91e2bf32f1793d2b557272d908eeaac3857ef1542121d306ee38809107",
+    "bytes": 2506
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/MobileEffectsToolbar.tsx": {
+    "sha256": "38d0791242df2b7d662ef9f9655722182943c828f62886e6731f510e4ccfaebc",
+    "bytes": 4141
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/effects/MoreFunEffects.tsx": {
+    "sha256": "c7d5ac9946c314d00aead4dcd49b9238a53138412d8abbfd1984d4efd16e81d4",
+    "bytes": 2078
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/gallery/ChangeVideoModal.tsx": {
+    "sha256": "8e21f227f26b9a7187d5f7b7bdcdb8533666c18ed63238a766783b4dc163a3d0",
+    "bytes": 2518
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/gallery/DefaultVideoGalleryModalTrigger.tsx": {
+    "sha256": "b6507b33d218a8c6d308f7638f53ff5e7b23590956c55165462bc1fd0cd64cf2",
+    "bytes": 1145
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/gallery/DemoVideoGallery.tsx": {
+    "sha256": "457005288268a092b3646695a107f9759e259f4f2cf82e4a03dee475c6b15232",
+    "bytes": 5750
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/gallery/DemoVideoGalleryModal.tsx": {
+    "sha256": "1281159cea52b11e3f5117392a78466107a40be62e62a2c5360742a426009af0",
+    "bytes": 4137
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/gallery/VideoGalleryUploadPhoto.tsx": {
+    "sha256": "3a153f628e92c8ef6a5b8c2d115d738c560b6cb9f08d100aee0e8dac6af2161d",
+    "bytes": 3146
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/gallery/VideoPhoto.tsx": {
+    "sha256": "290cb96fcb224e4faf8f068258b689e84c3fdaec912a7b15b36b557860d514cc",
+    "bytes": 3024
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/gallery/__generated__/DemoVideoGalleryModalQuery.graphql.ts": {
+    "sha256": "503a76493f15b14a22f58fbbd3fe8ea96b4e85ab33b6073150db1f0f882add68",
+    "bytes": 9059
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/gallery/__generated__/DemoVideoGalleryQuery.graphql.ts": {
+    "sha256": "46bdef69fdf4dbbdc9abb6268015f6560b4c5ae8a68e714b2e92b51a82621a14",
+    "bytes": 3876
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/gallery/__generated__/useUploadVideoMutation.graphql.ts": {
+    "sha256": "17dd12fb26846e699e8c32c2af27942df06d29282e543983bb54f57700723ae6",
+    "bytes": 3056
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/gallery/useUploadVideo.ts": {
+    "sha256": "fbca07295b3358fadea740ed64a0caaba61b54f342459cd10b8909f7563a14c1",
+    "bytes": 3459
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/icons/GitHubIcon.tsx": {
+    "sha256": "688f9f93b825b0214fb22d01eff2b6fed3d0931098c62d2be6ff0262137d650f",
+    "bytes": 1626
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/DownloadOption.tsx": {
+    "sha256": "4d135b837ae03ffb7d4f1d6cbca200de19d602dbcbbd2c8751c77ad04e14bcfc",
+    "bytes": 1090
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/GalleryOption.tsx": {
+    "sha256": "fab2e0c1fa5d99de7dc3fcfc922e5120231ab2880d4669a611df419dd1e5c2c3",
+    "bytes": 1488
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/MoreOptionsToolbar.tsx": {
+    "sha256": "3db75b6bf65c27daebbeef2d3dde09becf17562df56fdbff52e728cff62e5883",
+    "bytes": 2129
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/MoreOptionsToolbarBottomActions.tsx": {
+    "sha256": "7bbe80af62de9b4f1578820165aeb417e97d631b54888d7d5843c8c220ced1b1",
+    "bytes": 1632
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/OptionButton.tsx": {
+    "sha256": "df077656b1556e69308f4a111b40cb43bff7d583b793fc08299e4d8832ff55a3",
+    "bytes": 2509
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/ShareSection.tsx": {
+    "sha256": "93dc13a32fa53343c09d26b8ff295e699b590cd993813a5bc54571eab988732d",
+    "bytes": 796
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/ShareUtils.ts": {
+    "sha256": "cc06df0792fadc021e1e76af374d72b24dceb5b30a81888e227ee97502473166",
+    "bytes": 1316
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/TryAnotherVideoSection.tsx": {
+    "sha256": "c9d2773a48c3d1597c8e5e6077f3d8eff3b4b1ba5157542433bd7bbbb6859967",
+    "bytes": 2150
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/UploadOption.tsx": {
+    "sha256": "58148b9ec68d8e12d3a617341da137ea3d36a8fc4ac96864ef9790927c3431a5",
+    "bytes": 2722
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/__generated__/GetLinkOptionShareVideoMutation.graphql.ts": {
+    "sha256": "6524c1c77a94af84b27d312066398ec043dba131229965f63db6e3c8205b06cf",
+    "bytes": 2026
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/options/useDownloadVideo.ts": {
+    "sha256": "7d0c7bed248c435427c9b803be78a2cf93e627695b37be20987045d793bd7d0f",
+    "bytes": 2883
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/session/RestartSessionButton.tsx": {
+    "sha256": "a794d9a98244f0f40b0390715c25e4b742a5aa919479138d68f5dcb56f09de0f",
+    "bytes": 1323
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/session/__generated__/useCloseSessionBeforeUnloadMutation.graphql.ts": {
+    "sha256": "f4e76ad3b36b0ae2c739f77d6e0bc14a974154fed4aa09c2197fc3df117a215d",
+    "bytes": 2148
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/session/useCloseSessionBeforeUnload.ts": {
+    "sha256": "60bfdee2e351cf483b34e9ec7d809a8150574faedcbb761dcb2de500624c1ec4",
+    "bytes": 2746
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/session/useRestartSession.ts": {
+    "sha256": "d9b3de26ad741798883222713289c0c7c539596ddb8ff72886e500c361ef49f9",
+    "bytes": 2098
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/snackbar/DemoMessagesSnackbarUtils.ts": {
+    "sha256": "53f20fc30db7c5d530faa20a08c57d6798e4cda8f9aa84876070f25bb8786e6a",
+    "bytes": 2877
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/snackbar/MessagesSnackbar.tsx": {
+    "sha256": "91d2e08f38986eb7dd9abd10f0cc6f0f4d5a56de6f1d02c4d8d583c7acf6c0d9",
+    "bytes": 3324
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/snackbar/snackbarAtoms.ts": {
+    "sha256": "cbf3792109803902843ec0064ca32280ccfa9fb01624cbdb09f649ebc167f3b7",
+    "bytes": 952
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/snackbar/useDemoMessagesSnackbar.ts": {
+    "sha256": "04adac76408e53800f3d4a18fdfcba3e9d10814240e52b2dbf6ea7dcfa45e32f",
+    "bytes": 1673
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/snackbar/useExpireMessage.ts": {
+    "sha256": "d6794772ccfb1f733b2a1d32e6e28447545c1f352b6bf54ec64407e0f34e48d1",
+    "bytes": 2057
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/snackbar/useMessagesSnackbar.ts": {
+    "sha256": "2f5c5248e459601f3fc3fc4cd067fa40ac29e8fbdffb82aa96614f122e06970b",
+    "bytes": 1687
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/DesktopToolbar.tsx": {
+    "sha256": "c03b02dce096aef82e4615ca17ac6161bab3a3ce3179a2d750b1948957c9ce9d",
+    "bytes": 1598
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/MobileToolbar.tsx": {
+    "sha256": "340b9c2c53423c02c92defeb7f6bb444c27217d25f5bb42b0486f2a63afdf6ea",
+    "bytes": 1360
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/Toolbar.tsx": {
+    "sha256": "3a8308c2d469c40e55c4e1fbd318e661bec03d5212002ce41e8a3fd06b617c64",
+    "bytes": 3082
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/ToolbarActionIcon.tsx": {
+    "sha256": "db58bab09be1aee3da56d3c1225f7dbb280e60c4d557f2e9a0a13e3c8b69270d",
+    "bytes": 3033
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/ToolbarBottomActionsWrapper.tsx": {
+    "sha256": "01b3239c3d039954724f79e5e0d005f18351659855d6dae4ed5f0ca4813af9fa",
+    "bytes": 1224
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/ToolbarConfig.tsx": {
+    "sha256": "4f14bf74deee470234d06d162ab4ca9e3a543602dcbad9a86769029ee812d51d",
+    "bytes": 743
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/ToolbarHeaderWrapper.tsx": {
+    "sha256": "2f282e1a40e0d3129b5c7c08dd116c4cc7089faba3483f4e60bf990b0a7dc798",
+    "bytes": 1421
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/ToolbarProgressChip.tsx": {
+    "sha256": "1be2f81bb86b2308ba7532f48b2a44a7cc53775d6b73274136e587f016647a53",
+    "bytes": 1727
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/ToolbarSection.tsx": {
+    "sha256": "5974e8cce7331e3bf849a7a0490159d69a61817a118b65a1fdc2c9e0127bd983",
+    "bytes": 1069
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/useListenToStreamingState.ts": {
+    "sha256": "da6e1eb98c914f28c5a52e17ad0990e0589de8b298b3b2f80fd3cd402254e9ee",
+    "bytes": 2125
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/toolbar/useToolbarTabs.ts": {
+    "sha256": "01aba5f39625f83411896be55d97f6eaa6596b4cc0089875fe5a7d2090ea343c",
+    "bytes": 860
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/useFunctionThrottle.tsx": {
+    "sha256": "de5699fe80082ce8305222c888668ed31c2eaf4e7ae9348e61769f50a907ea35",
+    "bytes": 2896
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/ChangeVideoModal.tsx": {
+    "sha256": "8e21f227f26b9a7187d5f7b7bdcdb8533666c18ed63238a766783b4dc163a3d0",
+    "bytes": 2518
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/EventEmitter.ts": {
+    "sha256": "3c08c770705d4420e08f329559ce480cb7336c4b7e77a3b30901dcbc1e551307",
+    "bytes": 1711
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/Video.tsx": {
+    "sha256": "423f9a6c90c493db9dcdac6a690d62cc2614dd2d939eb057b437b55bd38cd499",
+    "bytes": 10781
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/VideoFilmstripWithPlayback.tsx": {
+    "sha256": "0ac19c3bdb59b683048453880d9e172eb5ba9f7fa52f69e3a2dd4b65df86f54f",
+    "bytes": 1561
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/VideoLoadingOverlay.tsx": {
+    "sha256": "d1791ca892cf4b1149caeb73c62d69c1dabcfee1d9dd3e1b579848f36fd68ea3",
+    "bytes": 1631
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/VideoWorker.ts": {
+    "sha256": "8d4e15a13a49b7b307e20a7a7ad5a9f6725cd27c2b3f874b1bb441ffc1eec8c7",
+    "bytes": 4399
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/VideoWorkerBridge.ts": {
+    "sha256": "d9669ca07c7997b8cdc5a606e13678f13ccda845e5c299959e22182ef0369a96",
+    "bytes": 13919
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/VideoWorkerContext.ts": {
+    "sha256": "e08a0f543d4cc30a4e0ff3545a97b09950e3352f6827581b180de7eb95dab9ec",
+    "bytes": 24944
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/VideoWorkerTypes.ts": {
+    "sha256": "34c6427d856d80cbe350d70d24df30cc417b83d1018f56932b0bd8a463f8eee3",
+    "bytes": 3443
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/editor/DemoVideoEditor.tsx": {
+    "sha256": "f83d545b2943962ebfc99430b38de5e8d86df86c5a8789526a188dd00daee081",
+    "bytes": 10090
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/editor/ImageUtils.ts": {
+    "sha256": "0b2d67d8c31c9f11622aefe79d832a47c1651130a9acba39c53f1788c54b418b",
+    "bytes": 3594
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/editor/VideoEditor.tsx": {
+    "sha256": "24211af413d554e70edd502a96987183cbc4f4d3a966e48f9db4b64ebff9902c",
+    "bytes": 2888
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/editor/VideoEditorUtils.ts": {
+    "sha256": "c2c9c9c4adfbc5777fa0506658122e488c51c1b7b50936a1b45173dd340bc6e1",
+    "bytes": 7318
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/editor/atoms.ts": {
+    "sha256": "793435741ba498755f6d7742edcfe3d388d029b011c3a85e7ee322001bcf31a2",
+    "bytes": 738
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/editor/useResetEditor.ts": {
+    "sha256": "b3c81e7d8455dceea78591e4ddeb6454f20074317beeeb7b0b0d79bd5a2b05db",
+    "bytes": 2826
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/editor/useVideo.ts": {
+    "sha256": "cced325d0fa3ef8739c6fff00978c2e5deb63d9551675ace1b9ef34857c46af5",
+    "bytes": 765
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/editor/useVideoEffect.ts": {
+    "sha256": "29bd6015c90f0910a4dcfeb142b4d554b766fe25ba388679306a5b762d56f237",
+    "bytes": 2595
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/ArrowGLEffect.ts": {
+    "sha256": "97bbb9571f3b88551546ff7980130d250bb645f99b34e8fa9d332a00f15f4929",
+    "bytes": 4817
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/BackgroundBlurEffect.ts": {
+    "sha256": "9e7cfac8be8b6d94b0837f1b7f151f8cbecbbc655f20fd6f8e63c817e673c1e3",
+    "bytes": 2666
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/BackgroundTextEffect.ts": {
+    "sha256": "f46c778d43898cdd583e1400f2bd5b752a23758f064dba56dff087f9596115fc",
+    "bytes": 2701
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/BaseGLEffect.ts": {
+    "sha256": "12bb5ae6c177c1392e4060edc12cf27ba08a3e3acdadde89a574840ce7628abc",
+    "bytes": 5617
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/BurstGLEffect.ts": {
+    "sha256": "0dc3a7a867bcf98ae8c25e9149abaf220e1bd4cd91336ae0a14a09cb14e45e1c",
+    "bytes": 5290
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/CutoutGLEffect.ts": {
+    "sha256": "39dffa5f069c17c5529bb64ce325afc913358d8edc4f30a14cb3c8180fdb6ac1",
+    "bytes": 4617
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/DesaturateEffect.ts": {
+    "sha256": "391ed489eb1fdeac41bb6f6a87e065787ea6798dfc329609da69f3d3bd532a79",
+    "bytes": 1284
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/Effect.ts": {
+    "sha256": "81cedf05457541898ccaa3e69c38ca6825c8461a4a8b05b28d86197e42c79d8c",
+    "bytes": 2526
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/EffectUtils.ts": {
+    "sha256": "2f8fe0156a6e6ba54c5e5c211177d44010fb2a2d07837109d23ea0211b96f711",
+    "bytes": 4351
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/Effects.ts": {
+    "sha256": "d085b2842f37a2355122e0bd935808884d77c0ace1979e04462104c131ea8fda",
+    "bytes": 3793
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/EraseBackgroundEffect.ts": {
+    "sha256": "6dab9adcf223bfc7b621471aff6c7aa8d2aa8ae958ea463f7f30578895a03dcb",
+    "bytes": 1143
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/EraseForegroundEffect.ts": {
+    "sha256": "2afd6861f016be2ee7986336a1a5deb54354791fb23e5743bab7ff3a8e3984c4",
+    "bytes": 1334
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/EraseForegroundGLEffect.ts": {
+    "sha256": "7633ea7fe2d2a6c7a55a9c7cc207452af3b2ab224e4a2a39c0790f155e0f5f96",
+    "bytes": 4009
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/GradientEffect.ts": {
+    "sha256": "6cce0fad94392fce27240223c626fe637739bad3a6c81887c8e4b377544fd6e5",
+    "bytes": 3226
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/NoisyMaskEffect.ts": {
+    "sha256": "79c007c2a81e635bf698c5119b95df86216f620cb1093994efda00644792ca46",
+    "bytes": 3729
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/OriginalEffect.ts": {
+    "sha256": "48a5cc2ec160d7a9a93e49d5c68cfe087b5e33a218625180f99f8916d96b9a13",
+    "bytes": 1402
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/OverlayEffect.ts": {
+    "sha256": "27f749977fc3058b18163ff62c3166e7fd709b77bcd20112f56b275ba5fbe576",
+    "bytes": 5852
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/PixelateEffect.ts": {
+    "sha256": "9981ccf3604a5a948d0d92808f1cbe33fbfabb109797e763f5cb3ae00d61a26a",
+    "bytes": 2735
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/PixelateMaskGLEffect.ts": {
+    "sha256": "f69863be9afb4e59e791e6c010e8b77e95bbdb2c5817edbe561cc497b4e1a442",
+    "bytes": 4609
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/ReplaceGLEffect.ts": {
+    "sha256": "f474dd76b1672f1fce9532820338412bd16be7f9947753c1e3f634f8444ac349",
+    "bytes": 6305
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/ScopeGLEffect.ts": {
+    "sha256": "94663107a53130f07ccb0e8d940d2148fa9bff0801c39a80d8e81c12c61f4fe0",
+    "bytes": 5453
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/SobelEffect.ts": {
+    "sha256": "af283082cf8e495717536f2d60969997f027698a31ce5a5a69eea4a6e55fa3d1",
+    "bytes": 2658
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/VibrantMaskEffect.ts": {
+    "sha256": "e47258c8f1958f16f5a709e90add4b817bba3fd225275d46f1d33642c4edfc78",
+    "bytes": 5582
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/Arrow.frag": {
+    "sha256": "0e003e957e8acb0335faeaeb98ad03c26b05ce6d7a0cf6ee9793574dda05a347",
+    "bytes": 6706
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/BackgroundBlur.frag": {
+    "sha256": "509c4d2e7f7595e3a76ca8af2a808f840d1e51b691a3e30870ac23dcef44668a",
+    "bytes": 1341
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/Burst.frag": {
+    "sha256": "80af34b36d8a696bd11ce47f85f9daad19b6283fe110ff33aff17b699931454a",
+    "bytes": 4568
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/Cutout.frag": {
+    "sha256": "7c2f93f1833adedb23f9f67ee8fec5df52b63a823be1c40a51b81e38e508d698",
+    "bytes": 1878
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/DefaultVert.vert": {
+    "sha256": "31cd7427dd53c9579c03ce857ed7271a61a325347ae8aaca18f2e2cf805d1575",
+    "bytes": 829
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/EraseForeground.frag": {
+    "sha256": "8febe50633f3bde127e4ee2e6c21908137f8e45666509c918057b6d1d02f21db",
+    "bytes": 1497
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/Gradient.frag": {
+    "sha256": "d590136434d430e4de168d099595d5d2c2d9e465b75ff190542005583b41b358",
+    "bytes": 994
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/NoisyMask.frag": {
+    "sha256": "f204d7729a29ad2e02c2c6c365f314fa1660b9859c33fc24b9eb53624c6b802b",
+    "bytes": 2043
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/Overlay.frag": {
+    "sha256": "ae6f4a9ae5523a958afa278afb8944c7e4572e15de4980f4f220918b5455c2b4",
+    "bytes": 6272
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/Overlay.vert": {
+    "sha256": "0790e400cabd4a1a8591ce8b8736dbe8fa73990d9efc7e36638454522bbef2cf",
+    "bytes": 870
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/Pixelate.frag": {
+    "sha256": "95fce23a6b7898632037413b600af16822f8b0feed25c03c931554aefad82d98",
+    "bytes": 1185
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/PixelateMask.frag": {
+    "sha256": "11a8cce6e5e076ceee92d6434f6904462dfe03be4d045675b242e7b53f569488",
+    "bytes": 1815
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/Replace.frag": {
+    "sha256": "0bd167b87bd6eabea8ec5d5a855e66f523d587e59ae06fa044226fee332e5a53",
+    "bytes": 3507
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/Scope.frag": {
+    "sha256": "2476dbbf4d8be58a0d1f08f6e8bf31cc96a5d7a8ebe8425b18093fd2433e0500",
+    "bytes": 4022
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/Sobel.frag": {
+    "sha256": "21a4caa4afb34cb0cf960a8169421865b00d4079cc60e29dd872f2c1c36ec70f",
+    "bytes": 2371
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/effects/shaders/VibrantMask.frag": {
+    "sha256": "a05387aafd8a76b8c1c0e620adcda36aa0c63c20c63893911d73ac3746c93a55",
+    "bytes": 1805
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/filmstrip/FilmstripUtil.tsx": {
+    "sha256": "c91d8602264360d2566898a68ce7ea5ca5bd91a473804aa07ee0db7256158ce1",
+    "bytes": 3355
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/filmstrip/SelectedFrameHelper.ts": {
+    "sha256": "d56144acbff9d295fdd0f290fa19fd528be92bf6977015ef9186513ee90b868b",
+    "bytes": 1663
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/filmstrip/VideoFilmstrip.tsx": {
+    "sha256": "25d5bdf60c4c540ea5a73838847aaae364a9d1576949f9ced75f4c37d8bbd429",
+    "bytes": 9886
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/filmstrip/atoms.ts": {
+    "sha256": "aacb163586099620b75b4b9fb68185f061a3fcbc9736326ec1edc6f16f521eba",
+    "bytes": 785
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/filmstrip/useDisableScrolling.ts": {
+    "sha256": "b02dcc8975d93cac999e619a02b23e5a068f7a672bd17cc8fc75254b13a6b605",
+    "bytes": 1516
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/filmstrip/useSelectedFrameHelper.ts": {
+    "sha256": "2803bcc1a71f9e32a0b456eb6a8178e2a72b56d61ae71d0c3bda341c6ac559f0",
+    "bytes": 807
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/layers/InteractionLayer.tsx": {
+    "sha256": "b18124986c64ffab65c08d7e5dff1636a05a6960eb6f2a315ec90099506bfa67",
+    "bytes": 2114
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/layers/PointsLayer.tsx": {
+    "sha256": "8413af21257e97e34b27dd28f52a48bd7c6489e323dfb680cd1bb68a016e6b16",
+    "bytes": 3598
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/useInputVideo.ts": {
+    "sha256": "c81d12d5afdf38901d370e671f3e5a3ebefef425f9959a238a80d5eb8a1775bf",
+    "bytes": 842
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/components/video/useVideoWorker.ts": {
+    "sha256": "55c31cf60e4f1edacac0767706e63d53a59a71cb460113dc163f0fb5c711651f",
+    "bytes": 2388
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/error/ErrorFallback.tsx": {
+    "sha256": "e3a2bc6279146feb4a055f840426661f491d3de41b76003a6f48aa2103da985f",
+    "bytes": 1444
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/error/ErrorReport.tsx": {
+    "sha256": "ff61aa4713c524e2086154bf4563051b67f8d7ffd73753e512ade4ada189b7c7",
+    "bytes": 2752
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/error/ErrorSerializationUtils.ts": {
+    "sha256": "c3c8a7887dd3581a5da723e6ea1225bc7460840fbcf62f26ae5e0f0e4519606d",
+    "bytes": 1288
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/error/ErrorUtils.ts": {
+    "sha256": "592213641f43ea732e2f46f6255513e8f377cf9df502997d24f7d04196b446e8",
+    "bytes": 2010
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/error/errorReportAtom.ts": {
+    "sha256": "5e9e90506900918ca146747dfcf312ed62741e9602cda2fb8d8e1ade1c060a22",
+    "bytes": 690
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/error/useReportError.tsx": {
+    "sha256": "02ed054d394769b5c59856ed3a95722a0449b7bc9e3bd07bdc6c5314528d7fe8",
+    "bytes": 1142
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/loading/LoadingMessage.tsx": {
+    "sha256": "ba29469fe2230ecffffb26ff961e57a0b0c796282359d5b53bd82f35338ce8ae",
+    "bytes": 938
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/loading/LoadingStateScreen.tsx": {
+    "sha256": "9f13c1dded9d4869fc94bded338f65c9f91ddd3574dc5df50b33e29a860fdf22",
+    "bytes": 3253
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/loading/StaticVideoPlayer.tsx": {
+    "sha256": "641b3113b03104ddc5159aa219b1d661cd42d1a3d8ae40ed0030bfd3ea1f198f",
+    "bytes": 1710
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/loading/UploadLoadingScreen.tsx": {
+    "sha256": "8ade7d50768eff9a091c2a472536684cf717fff08b12a21011c9c36cd081d89d",
+    "bytes": 2012
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/logger/DemoLogger.ts": {
+    "sha256": "9f4aa68be9fbeb2fcc4ae3e409a0a2e33248bedeecc9e4fc14a76f577f150d13",
+    "bytes": 2776
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/logger/LogEnvironment.ts": {
+    "sha256": "7da4d8077140d02f5615bdfafa893b0ac066434a3c0be2f5ee88a318e7dc3610",
+    "bytes": 876
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/logger/Logger.ts": {
+    "sha256": "66f85de7dd9d1e2aeb760aecd12d990543d8279b580c6bc3f8b227a05a648a28",
+    "bytes": 2068
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/screen/useScreenSize.tsx": {
+    "sha256": "a6aacff34915d6a5f918f44f4f53f4527ef6a8172a2dce50cbc163bb7d5c13ef",
+    "bytes": 1201
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/SAM2Model.ts": {
+    "sha256": "ae194f6466c86d858d1ab66256562c75194e4f8182f92a58787275d90fa6e72c",
+    "bytes": 24269
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/Tracker.ts": {
+    "sha256": "921fdf8bb156335f080c966b2f1154b179828f8f3038eed3694047a062f43bb7",
+    "bytes": 3216
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/TrackerTypes.ts": {
+    "sha256": "913d333b9a8481c78e7d085956f91330ac3123af0a1672320b59e28b2efdb50f",
+    "bytes": 4016
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/Trackers.ts": {
+    "sha256": "6508ec7c8288b8c331f900fcdb7a951edab1015a0272b3e34e16d89baa0405aa",
+    "bytes": 899
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/__generated__/SAM2ModelAddNewPointsMutation.graphql.ts": {
+    "sha256": "c6d7b9ab7cfd21fe84f5e42476bc6af1fad774ccc66db0e387e7f437b5345176",
+    "bytes": 3651
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/__generated__/SAM2ModelCancelPropagateInVideoMutation.graphql.ts": {
+    "sha256": "541b84daebbee6d6b48a4c07ecb97222b74eed3fcb422777e731e4952bea5581",
+    "bytes": 2254
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/__generated__/SAM2ModelClearPointsInFrameMutation.graphql.ts": {
+    "sha256": "de969eccc835dbfbc34907a913feb1418e7d6e03a3a256dcf5ef8da0ed5a9708",
+    "bytes": 3651
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/__generated__/SAM2ModelClearPointsInVideoMutation.graphql.ts": {
+    "sha256": "762b263076b2df87bce8331d727fca0551eb4084664aff4014564276aea14ab5",
+    "bytes": 2190
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/__generated__/SAM2ModelCloseSessionMutation.graphql.ts": {
+    "sha256": "d47d1fb9c6e637c358d5d4b2bc2a0ee8bbafed6be544951247a26474fd28ee46",
+    "bytes": 2094
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/__generated__/SAM2ModelRemoveObjectMutation.graphql.ts": {
+    "sha256": "2781aeda18b1165f3a5e0b01e891a6f07041c4d517ab61838b2ef05f1abaf234",
+    "bytes": 3553
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/tracker/__generated__/SAM2ModelStartSessionMutation.graphql.ts": {
+    "sha256": "21f05df47e1b952a2462e5e9b60131e0ccf095d234167ee2269b04b94721c4a4",
+    "bytes": 2094
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/utils/FileUtils.ts": {
+    "sha256": "d5c6047d23927968af61e403ce62a54af797ce8c034eadecccbe14cb8734397a",
+    "bytes": 3283
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/utils/ImageUtils.ts": {
+    "sha256": "0b2d67d8c31c9f11622aefe79d832a47c1651130a9acba39c53f1788c54b418b",
+    "bytes": 3594
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/utils/MaskUtils.ts": {
+    "sha256": "2a4170e872fe59d750d16b6d5a8e1aa307b8799e844b667c45042421d3304bbd",
+    "bytes": 1763
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/utils/MultipartStream.ts": {
+    "sha256": "2b2e8f8222adf37e71c7ac33ffcf4f15107a1e3dccc9bf1319d010899dc89f3e",
+    "bytes": 7132
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/utils/ShaderUtils.ts": {
+    "sha256": "2184bbd5bfcb93199e03d0efaa53e0b4e4d5e81c20f387756f68a606928e683d",
+    "bytes": 4998
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/utils/emptyFunction.ts": {
+    "sha256": "f1d5e101da4860234a68dfd228ab851ea034b71a843a40bc012048419f5fad2c",
+    "bytes": 886
+  },
+  "code/TEMPO/sam2/demo/frontend/src/common/utils/uuid.ts": {
+    "sha256": "2d6622ae9bc3b718aedada8dab9c5900cdfa01de5aec94b426e70675b1bc3e33",
+    "bytes": 1369
+  },
+  "code/TEMPO/sam2/demo/frontend/src/debug/stats/Stats.ts": {
+    "sha256": "4dc0e1472875c2cf1911e91439792c452f5bd811d49b9a4dcd27f228d1dc4f3a",
+    "bytes": 7743
+  },
+  "code/TEMPO/sam2/demo/frontend/src/debug/stats/StatsView.tsx": {
+    "sha256": "de0cf323b17ebfac6da34e77a8ca599ca8b4bc8fe0f1736137d108aed58f9cfc",
+    "bytes": 4008
+  },
+  "code/TEMPO/sam2/demo/frontend/src/demo/DemoConfig.tsx": {
+    "sha256": "45bf881726ab1bb5a98bbfebe59115b2e598a9f8eedb3a770f597598ef7a65d6",
+    "bytes": 1615
+  },
+  "code/TEMPO/sam2/demo/frontend/src/demo/DemoErrorFallback.tsx": {
+    "sha256": "60beaeb03cdb372c84fd86e795c9adf2f6601b1f79c0e831db4e035c331d4faa",
+    "bytes": 1084
+  },
+  "code/TEMPO/sam2/demo/frontend/src/demo/DemoSuspenseFallback.tsx": {
+    "sha256": "731b26e696f0f77c9b3462d605dd65f7cf55d67c80853f0018d04299e0da6f2e",
+    "bytes": 797
+  },
+  "code/TEMPO/sam2/demo/frontend/src/demo/SAM2DemoApp.tsx": {
+    "sha256": "406e15530141d6dc1673f9de70f4e7c873073e9c7708e6680d0478cdd351d350",
+    "bytes": 1779
+  },
+  "code/TEMPO/sam2/demo/frontend/src/demo/atoms.ts": {
+    "sha256": "86a419c94e9cfaa809d1797794afc521533910ef73048b407cacb875c6cdecb5",
+    "bytes": 4834
+  },
+  "code/TEMPO/sam2/demo/frontend/src/graphql/RelayEnvironment.ts": {
+    "sha256": "6dee6d024dcdb75ffe7d26fedc40965710d4229c60224dca56198d41f2c05ea9",
+    "bytes": 1638
+  },
+  "code/TEMPO/sam2/demo/frontend/src/graphql/RelayEnvironmentProvider.tsx": {
+    "sha256": "efb5e45935143a1e99e15e9b57b6e79a3a0c8c29d109af839513a69086b4d3c5",
+    "bytes": 2091
+  },
+  "code/TEMPO/sam2/demo/frontend/src/graphql/errors/CreateFilmstripError.ts": {
+    "sha256": "6c49d5f29f73db236f47fcb83e2bc86d647bca8c8d9c3cc6335a331b0caeddd1",
+    "bytes": 780
+  },
+  "code/TEMPO/sam2/demo/frontend/src/graphql/errors/DrawFrameError.ts": {
+    "sha256": "a81f6f1bbe0b8df57952fb6ffd93ac5fead040bb4a5bad2e101fba977547f6b8",
+    "bytes": 768
+  },
+  "code/TEMPO/sam2/demo/frontend/src/graphql/errors/WebGLContextError.ts": {
+    "sha256": "a92ffa4078ad22be073add625c59cd9e7b2a5e06787b497224be4be81389ceb9",
+    "bytes": 774
+  },
+  "code/TEMPO/sam2/demo/frontend/src/graphql/fetchGraphQL.ts": {
+    "sha256": "60cd641971ba8ec697f1a296c28d79a5583c187e2df243d3ee0a0de50ed55636",
+    "bytes": 2701
+  },
+  "code/TEMPO/sam2/demo/frontend/src/jscocotools/mask.ts": {
+    "sha256": "b31b92d97ad96c9e1d943c5ecb31be5eb112edfa1df6bc5c54ff810cde3f1763",
+    "bytes": 6781
+  },
+  "code/TEMPO/sam2/demo/frontend/src/layouts/DemoPageLayout.tsx": {
+    "sha256": "9df712bac168ca3be9d82d35fd813917c230266f38b5cfbf729a55f4165517f0",
+    "bytes": 1436
+  },
+  "code/TEMPO/sam2/demo/frontend/src/layouts/RootLayout.tsx": {
+    "sha256": "24fbc4afdbc391d051aeee6757b2de54f872d0e7e2f0774336d66321be234754",
+    "bytes": 2585
+  },
+  "code/TEMPO/sam2/demo/frontend/src/main.tsx": {
+    "sha256": "b18e611b7e49e8d56cf264af942110441492c9419651dac12aff1fcd3df1b5e7",
+    "bytes": 849
+  },
+  "code/TEMPO/sam2/demo/frontend/src/routes/DemoPage.tsx": {
+    "sha256": "cf81d41795dc54059d95d1439afc944ddcb5ebf0353513060a86a6bfa2c48f0f",
+    "bytes": 1960
+  },
+  "code/TEMPO/sam2/demo/frontend/src/routes/DemoPageWrapper.tsx": {
+    "sha256": "8a6605d84916ff8b768d8a12366e5beb7a5439e8b15ad24ee4175c8c80c8641f",
+    "bytes": 2737
+  },
+  "code/TEMPO/sam2/demo/frontend/src/routes/PageNotFoundPage.tsx": {
+    "sha256": "cd4cd9b5a37c6c570e0748041813a70262984623a96db9bf10518890e4a7154d",
+    "bytes": 981
+  },
+  "code/TEMPO/sam2/demo/frontend/src/routes/__generated__/DemoPageQuery.graphql.ts": {
+    "sha256": "e9c4004925f52327ff67baeb6cc1176024cd4fc1fd151c6ce20bcb57a41f24e1",
+    "bytes": 2553
+  },
+  "code/TEMPO/sam2/demo/frontend/src/settings/ApprovableInput.tsx": {
+    "sha256": "8b344352bdfdb55bb27161475b4cc816b04370c589fecdbae9fbe2f2278419f3",
+    "bytes": 3762
+  },
+  "code/TEMPO/sam2/demo/frontend/src/settings/SAM2Settings.tsx": {
+    "sha256": "44ccdf24bb7a2b2c5646f0b80d1336ad5c70f08f2f2f41e843299cf9f27ca5d7",
+    "bytes": 1441
+  },
+  "code/TEMPO/sam2/demo/frontend/src/settings/SettingsContextProvider.tsx": {
+    "sha256": "d33dce210f3685105d737b8c102cb1fb841448758d276dc8b5236249c254582f",
+    "bytes": 2671
+  },
+  "code/TEMPO/sam2/demo/frontend/src/settings/SettingsModal.tsx": {
+    "sha256": "64a1a75a893c63ea62d66a74c6a568ac109cbcc6769d8f5035ba8b1760ec464a",
+    "bytes": 3365
+  },
+  "code/TEMPO/sam2/demo/frontend/src/settings/SettingsReducer.ts": {
+    "sha256": "5b50d8218fe83fc78e672b56e2a8be5d2b20bbd280274498064387ba0623a501",
+    "bytes": 2309
+  },
+  "code/TEMPO/sam2/demo/frontend/src/settings/useSettingsContext.tsx": {
+    "sha256": "ce2b719726b730b70640f540872510bf959d57ca4028bad5b1794ea00b17daef",
+    "bytes": 810
+  },
+  "code/TEMPO/sam2/demo/frontend/src/theme/colors.ts": {
+    "sha256": "df05fc8cd90b4675697d32c959a6efc055a351cca9ea3cb91aea8938770266aa",
+    "bytes": 770
+  },
+  "code/TEMPO/sam2/demo/frontend/src/theme/gradientStyle.ts": {
+    "sha256": "fc566df97cd08b6ead74d96c1020a5b52e093a4604a280c57eb082c2ce272cd3",
+    "bytes": 783
+  },
+  "code/TEMPO/sam2/demo/frontend/src/theme/tokens.stylex.ts": {
+    "sha256": "aa3f175aca0c00337458f914eaf13ebc136140787088af7572af015455003528",
+    "bytes": 2671
+  },
+  "code/TEMPO/sam2/demo/frontend/src/types/mp4box/index.d.ts": {
+    "sha256": "9a8d73833124295908726152a7b4c553358cc351cd2f6ed0c2bce8aef9dfa691",
+    "bytes": 7214
+  },
+  "code/TEMPO/sam2/demo/frontend/src/vite-env.d.ts": {
+    "sha256": "721a2245db5323f136a58efc99f9977fc678093e9c146362b1ee3dc02ddc4c1a",
+    "bytes": 658
+  },
+  "code/TEMPO/sam2/demo/frontend/tailwind.config.js": {
+    "sha256": "8a39c902130b58957520eedb6a09e385851bf678a60ee48040a9949437cadd5c",
+    "bytes": 4035
+  },
+  "code/TEMPO/sam2/demo/frontend/tsconfig.json": {
+    "sha256": "c308ca41e2bbaf9c5ccd91a6f744d6e28c24c2ae421bb7602bcd9da0c4f2f5ad",
+    "bytes": 1407
+  },
+  "code/TEMPO/sam2/demo/frontend/tsconfig.node.json": {
+    "sha256": "f67eba17c3723e1f1cb98f3701d682d09b79367d8085aaa9759455c900f3d0bf",
+    "bytes": 898
+  },
+  "code/TEMPO/sam2/demo/frontend/vite.config.ts": {
+    "sha256": "d44bbc78b00a40a9405e4934ac1c2af8cfdc2bdf2e3390a1a25a5bb2a61b94fc",
+    "bytes": 1305
+  },
+  "code/TEMPO/sam2/demo/frontend/yarn.lock": {
+    "sha256": "b17c0f5e076d5ecd31218118a4b83d134a066d352510fd13addb6096a27baca3",
+    "bytes": 201817
+  },
+  "code/TEMPO/sam2/docker-compose.yaml": {
+    "sha256": "c8950a81787d716741a1ad18a1953404b781b893488c7575ae758b1037dbae1c",
+    "bytes": 1095
+  },
+  "code/TEMPO/sam2/pyproject.toml": {
+    "sha256": "c58230f78769620dcd11d15824d491b049be8f542eeb875d2e8091be797ec3f3",
+    "bytes": 120
+  },
+  "code/TEMPO/sam2/sam2/__init__.py": {
+    "sha256": "b87ca1e95cd54b81766e8c74acf0e937952639529e40d2b4088693286f49419e",
+    "bytes": 395
+  },
+  "code/TEMPO/sam2/sam2/automatic_mask_generator.py": {
+    "sha256": "66df266dbe14412305ae3398f0ec1bb21b303a93216b102d767e6c4ee5d4c3d7",
+    "bytes": 18461
+  },
+  "code/TEMPO/sam2/sam2/benchmark.py": {
+    "sha256": "9b7a3506b88842ec09031fb7cd0fc1d3fed82e137ce06dbca10495e6c180dda9",
+    "bytes": 2811
+  },
+  "code/TEMPO/sam2/sam2/build_sam.py": {
+    "sha256": "856d64d71e44407401297b551884fb4cd1aba8082de0ff5fc60fac3dd42f094d",
+    "bytes": 6405
+  },
+  "code/TEMPO/sam2/sam2/configs/sam2/sam2_hiera_b+.yaml": {
+    "sha256": "644d1a9aaa7e14183802246dee4f43627e067d77dd89f1f40d83657db18d038b",
+    "bytes": 3548
+  },
+  "code/TEMPO/sam2/sam2/configs/sam2/sam2_hiera_l.yaml": {
+    "sha256": "0ee9f2037fd98489212bb0b78a56f33ac82eb177cf5e52c88be3714cb84eea26",
+    "bytes": 3696
+  },
+  "code/TEMPO/sam2/sam2/configs/sam2/sam2_hiera_s.yaml": {
+    "sha256": "20e0ade957a4ab5e8138c93c346a8d8965c0b00d1a05fa0e79ce477985904188",
+    "bytes": 3659
+  },
+  "code/TEMPO/sam2/sam2/configs/sam2/sam2_hiera_t.yaml": {
+    "sha256": "33399c73cd13bbc3d0c1cea843fa2fc255fdb20139fe07f042743e046ac46b6b",
+    "bytes": 3753
+  },
+  "code/TEMPO/sam2/sam2/configs/sam2.1/sam2.1_hiera_b+.yaml": {
+    "sha256": "37d6c56b07a7f8d08baaa314315c60dc3aabe2edc66cd92bac6d1ed50038e788",
+    "bytes": 3650
+  },
+  "code/TEMPO/sam2/sam2/configs/sam2.1/sam2.1_hiera_l.yaml": {
+    "sha256": "1dbd6cb6dfebeaf588c7006ee222c6efbfa9049a7ad472a3cdfb2f5d919e8107",
+    "bytes": 3798
+  },
+  "code/TEMPO/sam2/sam2/configs/sam2.1/sam2.1_hiera_s.yaml": {
+    "sha256": "0f36b91e86e58d06c87e42997166212468b88b98b60e4d816d5e4d4d088b6f55",
+    "bytes": 3761
+  },
+  "code/TEMPO/sam2/sam2/configs/sam2.1/sam2.1_hiera_t.yaml": {
+    "sha256": "f932eac1c6241e910031b2f000a81cd9f8a8d4896e2277ab5ffb721f378b188d",
+    "bytes": 3855
+  },
+  "code/TEMPO/sam2/sam2/configs/sam2.1_training/sam2.1_hiera_b+_MOSE_finetune.yaml": {
+    "sha256": "d96919e157527116c3a80c6ec961151bda98e5eb988ae4dd85be6e7efbd2b51f",
+    "bytes": 11256
+  },
+  "code/TEMPO/sam2/sam2/csrc/connected_components.cu": {
+    "sha256": "926c277e24f40609622bb4ce49912838d1c799e63edcccc1c75e65e701acd497",
+    "bytes": 7808
+  },
+  "code/TEMPO/sam2/sam2/modeling/__init__.py": {
+    "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+    "bytes": 197
+  },
+  "code/TEMPO/sam2/sam2/modeling/backbones/__init__.py": {
+    "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+    "bytes": 197
+  },
+  "code/TEMPO/sam2/sam2/modeling/backbones/hieradet.py": {
+    "sha256": "03785581ca304d0451ae0df7a08ee0bf1e1dbe66fad285066e6b9ffc0d88d64f",
+    "bytes": 10003
+  },
+  "code/TEMPO/sam2/sam2/modeling/backbones/image_encoder.py": {
+    "sha256": "16eaad232220386f510ca8dfab8655e63699977149a4daf9ce9c6f374e6777a9",
+    "bytes": 4706
+  },
+  "code/TEMPO/sam2/sam2/modeling/backbones/utils.py": {
+    "sha256": "c4a0657db2a92bda2a7ff116cd4017f6b1c59af6408093d8874eb08a0df476ad",
+    "bytes": 3007
+  },
+  "code/TEMPO/sam2/sam2/modeling/memory_attention.py": {
+    "sha256": "07358cb7f58ec3788e88ff4e6415f8a9d628a3963529d6e2c915494a5347c8e2",
+    "bytes": 5509
+  },
+  "code/TEMPO/sam2/sam2/modeling/memory_encoder.py": {
+    "sha256": "73f7089ae5fdacdfcaaf3deca1ca6d9f84d89e7deb9cf97589622a9ef17ba42f",
+    "bytes": 5657
+  },
+  "code/TEMPO/sam2/sam2/modeling/position_encoding.py": {
+    "sha256": "b51404718c0d38f381293c8e5e00a15d129651b7f09b1158002d8974a30967b5",
+    "bytes": 8980
+  },
+  "code/TEMPO/sam2/sam2/modeling/sam/__init__.py": {
+    "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+    "bytes": 197
+  },
+  "code/TEMPO/sam2/sam2/modeling/sam/mask_decoder.py": {
+    "sha256": "ca3523c58365574faddf1bfb54f374e4b4beba05127185ea2b17d22b916e099a",
+    "bytes": 12657
+  },
+  "code/TEMPO/sam2/sam2/modeling/sam/prompt_encoder.py": {
+    "sha256": "4965ccb4a4504aa4d7246b2ad66ffeacd2626415c86a261dc1c65ffd8ae1d40d",
+    "bytes": 7541
+  },
+  "code/TEMPO/sam2/sam2/modeling/sam/transformer.py": {
+    "sha256": "cda19052331e775190ce8b1159efcb828a4632d931a6d8bd4d47109f121782f1",
+    "bytes": 10761
+  },
+  "code/TEMPO/sam2/sam2/modeling/sam2_base.py": {
+    "sha256": "69a46b44e8625f509791352bd09beaafe589cd7d872721384e63d37f9fdc6e41",
+    "bytes": 46983
+  },
+  "code/TEMPO/sam2/sam2/modeling/sam2_utils.py": {
+    "sha256": "e35bbf13bc2e544a0272cd3f9539af38a752676ac3cd744be31cd8220afee804",
+    "bytes": 13173
+  },
+  "code/TEMPO/sam2/sam2/sam2_image_predictor.py": {
+    "sha256": "f13e5f9d94e5c8d9d2c3622dab20c8f334c089ef2ee5ea8e199da7d332b029ba",
+    "bytes": 19937
+  },
+  "code/TEMPO/sam2/sam2/sam2_video_predictor.py": {
+    "sha256": "912555920a77f72ded07839efa33fcceecc79f3523abbec783f0be46ee2c55c2",
+    "bytes": 58921
+  },
+  "code/TEMPO/sam2/sam2/sam2_video_predictor_legacy.py": {
+    "sha256": "e0c054112f21bfa63620f2026c8bb2e0f4e284b138d09426a08d39f2e882c3f2",
+    "bytes": 58777
+  },
+  "code/TEMPO/sam2/sam2/utils/__init__.py": {
+    "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+    "bytes": 197
+  },
+  "code/TEMPO/sam2/sam2/utils/amg.py": {
+    "sha256": "b7b33090e2af72e04dbb815c8f32aff41a4ed1abf9668f62b59f1bdd640ca5d8",
+    "bytes": 12842
+  },
+  "code/TEMPO/sam2/sam2/utils/misc.py": {
+    "sha256": "01600c01c161cd079d7106fb1d4da845cf91aa31ab2bcecaf8cb151b6d6d20a2",
+    "bytes": 13090
+  },
+  "code/TEMPO/sam2/sam2/utils/transforms.py": {
+    "sha256": "ba3a64f4600c62f209206a6df3b40e3fcf133edae32fad658831bb0c2a6d1146",
+    "bytes": 4885
+  },
+  "code/TEMPO/sam2/sav_dataset/LICENSE": {
+    "sha256": "28b6f4b85d4f6867c99bcba442d3e0bffc4e6f1a6e04e210a4bb9c9a3b56306a",
+    "bytes": 1514
+  },
+  "code/TEMPO/sam2/sav_dataset/LICENSE_DAVIS": {
+    "sha256": "a727bc2b6f26a1f1c76d0511502da6ba208212708c04a65230159331906354f1",
+    "bytes": 1550
+  },
+  "code/TEMPO/sam2/sav_dataset/LICENSE_VOS_BENCHMARK": {
+    "sha256": "104f011f1cd91268d54a9fab1ff769ef01081410cd622e0f723c03d146d02482",
+    "bytes": 1048
+  },
+  "code/TEMPO/sam2/sav_dataset/README.md": {
+    "sha256": "d0084f4900800e4160a2a65af5db3d5fd027bc60ae831a36ded0b7994fc53292",
+    "bytes": 8404
+  },
+  "code/TEMPO/sam2/sav_dataset/example/sav_000001_auto.json": {
+    "sha256": "a9a7fb8fc792ec051668d0a9bd849296d1b882592aed6bd707831703874a7ddf",
+    "bytes": 389294
+  },
+  "code/TEMPO/sam2/sav_dataset/example/sav_000001_manual.json": {
+    "sha256": "c6b58b42e41b3c346bf1e6ea2b4ec03650e814ae447a8881e73b021e204c485e",
+    "bytes": 216107
+  },
+  "code/TEMPO/sam2/sav_dataset/requirements.txt": {
+    "sha256": "6891d04a88919724af4acba3e3276108044f23ea16d1c6f2a9e5dd4a0405396d",
+    "bytes": 69
+  },
+  "code/TEMPO/sam2/sav_dataset/sav_evaluator.py": {
+    "sha256": "1b11190b7de3d141f4610005a1b18235fd9bc97350889a1107b5511fd73ac9c9",
+    "bytes": 3050
+  },
+  "code/TEMPO/sam2/sav_dataset/utils/sav_benchmark.py": {
+    "sha256": "f63c444825ce5807d2736b2608bdcf2b9c92d2076f029219b087530e1c1bf768",
+    "bytes": 17915
+  },
+  "code/TEMPO/sam2/sav_dataset/utils/sav_utils.py": {
+    "sha256": "6d1df08dd4bd77219bdaaef9d44065c8bc7396fee013b8d344d6e11582d7b95b",
+    "bytes": 5793
+  },
+  "code/TEMPO/sam2/setup.py": {
+    "sha256": "9ca49a33def161d2cafa56ddef744178fa56d3219242bd8b69909904c2e63dff",
+    "bytes": 5051
+  },
+  "code/TEMPO/sam2/tools/README.md": {
+    "sha256": "59b59c61b99eab83a60a1d322a69f99cc4ca3d672a9c507949fc3117cd23721f",
+    "bytes": 2300
+  },
+  "code/TEMPO/sam2/tools/vos_inference.py": {
+    "sha256": "46bdc87ec75e3b7862e3d7049d4b23c67d2661dacbc1a56e8e8d9bc7bc573c23",
+    "bytes": 22397
+  },
+  "code/TEMPO/sam2/training/README.md": {
+    "sha256": "e37dae5c1d360f5e086003a0557650bbced5e40bd266ed95a8dd6c84b40b07f8",
+    "bytes": 6667
+  },
+  "code/TEMPO/sam2/training/__init__.py": {
+    "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+    "bytes": 197
+  },
+  "code/TEMPO/sam2/training/assets/MOSE_sample_train_list.txt": {
+    "sha256": "cc27e56226efbb0035794974283d5ba87f015f797d0de522261a3b010015005a",
+    "bytes": 11214
+  },
+  "code/TEMPO/sam2/training/assets/MOSE_sample_val_list.txt": {
+    "sha256": "bb1990dc36f74f325fae2c74871e3899fcb048a41c08c37753c7164378de3be7",
+    "bytes": 1800
+  },
+  "code/TEMPO/sam2/training/dataset/__init__.py": {
+    "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+    "bytes": 197
+  },
+  "code/TEMPO/sam2/training/dataset/sam2_datasets.py": {
+    "sha256": "84d0474ffefe033375a72c09acd21f84cac0aa9521dd11ca27ec85de1affb7aa",
+    "bytes": 7408
+  },
+  "code/TEMPO/sam2/training/dataset/transforms.py": {
+    "sha256": "7e70b69da6864e6fdceb8e403d7fb2b401fbc9e4ebd5fe97275b2c598e7239fe",
+    "bytes": 18539
+  },
+  "code/TEMPO/sam2/training/dataset/utils.py": {
+    "sha256": "41ae2a477c28ae3a637e409983c764c77c5ce51fe551ec3166d4867861c59415",
+    "bytes": 3891
+  },
+  "code/TEMPO/sam2/training/dataset/vos_dataset.py": {
+    "sha256": "22fca99942b0a5f31f7a6b92c135261a8531f2e3f80b9d48c245dcc46204db83",
+    "bytes": 5796
+  },
+  "code/TEMPO/sam2/training/dataset/vos_raw_dataset.py": {
+    "sha256": "7d1cb60a5d70a56eae3048a9c5f0c0e3fd8f8a3fcc53c851fdda1dc31ec281a2",
+    "bytes": 10001
+  },
+  "code/TEMPO/sam2/training/dataset/vos_sampler.py": {
+    "sha256": "8fdad904c369de7697fed857c58f3428228f189a256dcd8ce47229164c91a206",
+    "bytes": 3429
+  },
+  "code/TEMPO/sam2/training/dataset/vos_segment_loader.py": {
+    "sha256": "c17990e0ac640441e627da3ea0c431b23d842e9f4055d7d0aa42fea099053967",
+    "bytes": 10315
+  },
+  "code/TEMPO/sam2/training/loss_fns.py": {
+    "sha256": "457d7bd5c90fbab7c1a9012abc01e7f5c6583289bf51e366dea0a22f04e6ef38",
+    "bytes": 12378
+  },
+  "code/TEMPO/sam2/training/model/__init__.py": {
+    "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+    "bytes": 197
+  },
+  "code/TEMPO/sam2/training/model/sam2.py": {
+    "sha256": "1bd1ba698ab1803e6496fc1c3fe6d522b19393d9e23650d18e7c76843236fa44",
+    "bytes": 26348
+  },
+  "code/TEMPO/sam2/training/optimizer.py": {
+    "sha256": "382c093e26ff8d0b48661e325ddc7ac6fcb2125c9915806ff83c2bef8ee36487",
+    "bytes": 19873
+  },
+  "code/TEMPO/sam2/training/scripts/sav_frame_extraction_submitit.py": {
+    "sha256": "eb414710bacbb59c689784796017b97757eb3670bf2d634bae1aace1e89e179c",
+    "bytes": 4823
+  },
+  "code/TEMPO/sam2/training/train.py": {
+    "sha256": "257d10561e3e4e13904fb04859d1fe0aa0335a653670a8571cdcb576bf8f44c8",
+    "bytes": 10187
+  },
+  "code/TEMPO/sam2/training/trainer.py": {
+    "sha256": "631c61cafb6c62a046cc706207e36ea110784ef075031b36d4e41bd708166c85",
+    "bytes": 41374
+  },
+  "code/TEMPO/sam2/training/utils/__init__.py": {
+    "sha256": "34bd8069c54764e7b8d73a78905dbe6467140a2f73170875128f6ca4d8cdd0aa",
+    "bytes": 197
+  },
+  "code/TEMPO/sam2/training/utils/checkpoint_utils.py": {
+    "sha256": "a7bf9b26e469652dfaa7e48e86f29fb71ad9a52fe1797f9130fc9653f2a7c26c",
+    "bytes": 11727
+  },
+  "code/TEMPO/sam2/training/utils/data_utils.py": {
+    "sha256": "f773363d9ea7574d0aefd70db8b462ab64810b4fefb7b8a6d160a11915c393a4",
+    "bytes": 5815
+  },
+  "code/TEMPO/sam2/training/utils/distributed.py": {
+    "sha256": "4eaf6a479fef9ca5141a7fc7d19224683fc5d740f11303f4aafebe0d963edb62",
+    "bytes": 18986
+  },
+  "code/TEMPO/sam2/training/utils/logger.py": {
+    "sha256": "1e1892d376873a88cfacf1aab7c38d750ce6b208a6b3bac45bf614b0e4a3514d",
+    "bytes": 7676
+  },
+  "code/TEMPO/sam2/training/utils/train_utils.py": {
+    "sha256": "f0333973e950cf9edce184deeb1cac636668b7dcbe3223da64a44d3c2121d1ba",
+    "bytes": 8806
+  },
+  "code/TEMPO/scripts/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "code/TEMPO/scripts/compute_norm_stats.py": {
+    "sha256": "254d30c84297e3f95a7397b0dd38d0d0134c91510f30d6117b5dca4e56b28ec2",
+    "bytes": 4590
+  },
+  "code/TEMPO/scripts/serve_policy.py": {
+    "sha256": "eccc0448b4873fd30a1fff3355c5de7a7c227138e6db04b7dcaa5bb38a6a5809",
+    "bytes": 3687
+  },
+  "code/TEMPO/scripts/train.py": {
+    "sha256": "28d0e8e39f954945f0987ec51b6efd7fbd8dfa948caed94e1f919e402cce26db",
+    "bytes": 10537
+  },
+  "code/TEMPO/scripts/train_pytorch.py": {
+    "sha256": "dc8092663e20ba11562d5fda9211be696cb71e6bcfff32ed06dbe1ff9e2ec8ac",
+    "bytes": 28799
+  },
+  "code/TEMPO/src/openpi/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "code/TEMPO/src/openpi/conftest.py": {
+    "sha256": "626672e385fb276396c119e2220421065c58f8ec602401e8bf2ae509f9fffaf3",
+    "bytes": 339
+  },
+  "code/TEMPO/src/openpi/models/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "code/TEMPO/src/openpi/models/gemma.py": {
+    "sha256": "7e42ada4ae7e9995f0ef3e33a0c224758323c2015e2d9d72ec15726a8a001d2a",
+    "bytes": 17146
+  },
+  "code/TEMPO/src/openpi/models/gemma_fast.py": {
+    "sha256": "563c6e1ffd8afa31c406bcb8894a605e87df88f6c075d398d97a57af6bc3aefa",
+    "bytes": 15643
+  },
+  "code/TEMPO/src/openpi/models/lora.py": {
+    "sha256": "ced28716950c34d84a1a6d0b03b1d9550000732721df884818080b6e78cb3289",
+    "bytes": 5342
+  },
+  "code/TEMPO/src/openpi/models/lora_test.py": {
+    "sha256": "a0f10525de7773310402b3ffa636e88ffff7035f3179b140aacc6809c122f085",
+    "bytes": 3138
+  },
+  "code/TEMPO/src/openpi/models/model.py": {
+    "sha256": "88d59166d7451df15727897b8e9aac4ace87ef5749ca4ebbe5ce8e2153863443",
+    "bytes": 14436
+  },
+  "code/TEMPO/src/openpi/models/model_test.py": {
+    "sha256": "b8b9f744e1c48d9cbe6ceda75b11d2a31d09e2dd130a5c6a020ebbb8bdcd4e0d",
+    "bytes": 3016
+  },
+  "code/TEMPO/src/openpi/models/pi0.py": {
+    "sha256": "24b32d7c6ed5e409459afa8ca5af96a4dae09c2dcdf48e828907e411f4f12342",
+    "bytes": 12887
+  },
+  "code/TEMPO/src/openpi/models/pi0_config.py": {
+    "sha256": "bc19200f7d62aacaa3ee6bfbd32b4e45689d81ad2d8a5f5d4c1087ec5af06961",
+    "bytes": 7733
+  },
+  "code/TEMPO/src/openpi/models/pi0_fast.py": {
+    "sha256": "627332a555046f2744ef144c45f8bd3361a9820cf68854a4528d0fdbba7e9aa3",
+    "bytes": 13209
+  },
+  "code/TEMPO/src/openpi/models/pi0_test.py": {
+    "sha256": "af2361fd3b7d75783e46c1dda4b2ffdd541dec25aa67667ba9c0ef7316ce8679",
+    "bytes": 1715
+  },
+  "code/TEMPO/src/openpi/models/siglip.py": {
+    "sha256": "14b4df0be280d5769fb0dc31a40cde27525dbb1980cc998c28475d62fa3cad32",
+    "bytes": 12078
+  },
+  "code/TEMPO/src/openpi/models/tokenizer.py": {
+    "sha256": "df486f07831e7139f73ee87ef3004fd25f30542b00d068e26e0ca80bcb630b4a",
+    "bytes": 17751
+  },
+  "code/TEMPO/src/openpi/models/tokenizer_test.py": {
+    "sha256": "5abd179ce883420e39d4d18b33d0123290af752da243003aa48a3bc06dbb9517",
+    "bytes": 807
+  },
+  "code/TEMPO/src/openpi/models/utils/fsq_tokenizer.py": {
+    "sha256": "88866638ee4775f46a222561a957bd35e20600fe38c5888b587016ad77b1065f",
+    "bytes": 15928
+  },
+  "code/TEMPO/src/openpi/models/vit.py": {
+    "sha256": "d285d057636c3cba2d1fd3b37693b18075ad4b9c3b47bbde807c34c6c376ac93",
+    "bytes": 10266
+  },
+  "code/TEMPO/src/openpi/models_pytorch/gemma_pytorch.py": {
+    "sha256": "ef7b7ac9ec90a2d7fa2a6dc356c77cd97968fcba7dc5dbd72a9e0433b12f6272",
+    "bytes": 13780
+  },
+  "code/TEMPO/src/openpi/models_pytorch/pi0_pytorch.py": {
+    "sha256": "d3fd6dabc1bdef852517f576cf4e56ce040c0e2cc2487b17346a0673d10e7d88",
+    "bytes": 31916
+  },
+  "code/TEMPO/src/openpi/models_pytorch/preprocessing_pytorch.py": {
+    "sha256": "2540716e26c206635a42f7b9f52b75fb38f673197d8e4910fc7b707332d14865",
+    "bytes": 8342
+  },
+  "code/TEMPO/src/openpi/models_pytorch/transformers_replace/models/gemma/configuration_gemma.py": {
+    "sha256": "26fd0d0f52730ab32b6f337eb73ae9a26cb71ae0915bc49eced1d0e2ed8d0ec6",
+    "bytes": 8958
+  },
+  "code/TEMPO/src/openpi/models_pytorch/transformers_replace/models/gemma/modeling_gemma.py": {
+    "sha256": "17eeb54e277939e58cd6f8a92719a275e36baf0c9f463b2754227d42f87aedde",
+    "bytes": 36392
+  },
+  "code/TEMPO/src/openpi/models_pytorch/transformers_replace/models/paligemma/modeling_paligemma.py": {
+    "sha256": "33cb0c99bf972426be03425b336bd293f7d48f975095248816357039304aad8e",
+    "bytes": 28087
+  },
+  "code/TEMPO/src/openpi/models_pytorch/transformers_replace/models/siglip/check.py": {
+    "sha256": "466e8eb7887ac5ccc98118a3169298d6ab65a284d834bae74751e3854dbc4245",
+    "bytes": 133
+  },
+  "code/TEMPO/src/openpi/models_pytorch/transformers_replace/models/siglip/modeling_siglip.py": {
+    "sha256": "168308842bde942d402bb5281f7a0b16c2a404229f11a3f5eb6be7c87faa52da",
+    "bytes": 55328
+  },
+  "code/TEMPO/src/openpi/models_pytorch/ut_decoder.py": {
+    "sha256": "406510c619881b0835fe9f274a28f5858d2ed637361583ee12f587bfa9496cd9",
+    "bytes": 4307
+  },
+  "code/TEMPO/src/openpi/policies/aloha_policy.py": {
+    "sha256": "50d7ad972d80142ecb0f03b0780dacfd3af212946f4c9aac31a204b02db4543d",
+    "bytes": 7543
+  },
+  "code/TEMPO/src/openpi/policies/droid_policy.py": {
+    "sha256": "7d0893555964d485e231f70084125084a99495705ddd74b29461229d524fff26",
+    "bytes": 3186
+  },
+  "code/TEMPO/src/openpi/policies/libero_policy.py": {
+    "sha256": "ad01e5be74516d9ec9aeb1f76294d5c9f7f7179a60f1f7fbbb35e7646534f81a",
+    "bytes": 4320
+  },
+  "code/TEMPO/src/openpi/policies/policy.py": {
+    "sha256": "a2ac5236e23b11d0f5a840d4a8fef148d89dba921d5452ec5dfcd5a6ffa46f20",
+    "bytes": 5344
+  },
+  "code/TEMPO/src/openpi/policies/policy_config.py": {
+    "sha256": "aaf42ab04a33b6c91d2447926211646c33ebd8ebfa427f026d7b6c4f7c45ec52",
+    "bytes": 4107
+  },
+  "code/TEMPO/src/openpi/policies/yam_dual_policy.py": {
+    "sha256": "ddc95b47c37bd03996a581fc414c9b1e7282fa031940b5d77b95913a0b03a082",
+    "bytes": 13802
+  },
+  "code/TEMPO/src/openpi/py.typed": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "code/TEMPO/src/openpi/serving/websocket_policy_server.py": {
+    "sha256": "be82b3818fd0267e27c11a9fb22c288e973be818cabccaf1cc582d4b35e95b51",
+    "bytes": 3081
+  },
+  "code/TEMPO/src/openpi/shared/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "code/TEMPO/src/openpi/shared/array_typing.py": {
+    "sha256": "6524945566eab3eb97b75a6280ba4724617b4d028c55f05172b283c3de68a026",
+    "bytes": 3402
+  },
+  "code/TEMPO/src/openpi/shared/download.py": {
+    "sha256": "1fee4957a275ab632fd4dd98af240516a2a708da2db38a838132f05c04da425d",
+    "bytes": 7817
+  },
+  "code/TEMPO/src/openpi/shared/download_test.py": {
+    "sha256": "234ee70ab2501a1421f6c44cbd83c1e16747597023319ae1446bed9d44f17072",
+    "bytes": 1490
+  },
+  "code/TEMPO/src/openpi/shared/image_tools.py": {
+    "sha256": "0f8fcb355288119e56acb56d550c1cc1f3a9edddceb0dc5b319f955943ef7767",
+    "bytes": 4665
+  },
+  "code/TEMPO/src/openpi/shared/image_tools_test.py": {
+    "sha256": "842374579dc9f4c2907da5e8bb555efe5a3f4902b659720c8e90115863dd59fe",
+    "bytes": 1418
+  },
+  "code/TEMPO/src/openpi/shared/nnx_utils.py": {
+    "sha256": "4da7111ba3011c4d1c381c9ed17257771df6a50ed89182647c3fb6f79208005e",
+    "bytes": 2844
+  },
+  "code/TEMPO/src/openpi/shared/normalize.py": {
+    "sha256": "6c2cea4946fb07e51801530400d2b2fd94730e195cd290d6b6960114eca9739d",
+    "bytes": 5529
+  },
+  "code/TEMPO/src/openpi/shared/normalize_test.py": {
+    "sha256": "fda27a21cf37f337b12bcab71229407c2a349c5965c33f278bdc468ed03f58af",
+    "bytes": 1521
+  },
+  "code/TEMPO/src/openpi/training/_lerobot_compat.py": {
+    "sha256": "20ecb0af965e5a1902cec15fac91181a19597d5e3e31477b91a1ae296e4a7b1a",
+    "bytes": 1354
+  },
+  "code/TEMPO/src/openpi/training/checkpoints.py": {
+    "sha256": "3cc32682ec3609e9075dabd991488edb9d7f6c045443f58963d733f99c468dbd",
+    "bytes": 5763
+  },
+  "code/TEMPO/src/openpi/training/config.py": {
+    "sha256": "d122eb796c0d0c3399e97ec2c88be0da9b269ea4bec05e0c025797974aa8f66b",
+    "bytes": 70492
+  },
+  "code/TEMPO/src/openpi/training/data_loader.py": {
+    "sha256": "5b83056cb3e8b80b8ed18a3d88bbd039fc360403fc0ef9620670844f7d54dc2f",
+    "bytes": 20928
+  },
+  "code/TEMPO/src/openpi/training/droid_rlds_dataset.py": {
+    "sha256": "1d3a057a040240218234d7dbc6680ee4fe8256f2058531a0f9fefd3f7ee995a4",
+    "bytes": 10886
+  },
+  "code/TEMPO/src/openpi/training/misc/polaris_config.py": {
+    "sha256": "0c112b13b10c3bbb426c91a6fcceec7f2c06d7f3e8d15c6ac5ff5b1aeb0015e9",
+    "bytes": 9710
+  },
+  "code/TEMPO/src/openpi/training/misc/roboarena_config.py": {
+    "sha256": "3b9df7b9a63337d8186b6ea5ed99a0aa5768a653146dda925c30a0e438d430d5",
+    "bytes": 4822
+  },
+  "code/TEMPO/src/openpi/training/optimizer.py": {
+    "sha256": "cfb5d6f6aec61fbe961287b4015c652260628a0ed4682a0dbdc271b8e65431fa",
+    "bytes": 3202
+  },
+  "code/TEMPO/src/openpi/training/sharding.py": {
+    "sha256": "c67c4112a126ab097571c8a882fd1ee3f106b15b6e608e7205ac7f29b44ca985",
+    "bytes": 4099
+  },
+  "code/TEMPO/src/openpi/training/utils.py": {
+    "sha256": "b684e674343f86ef5e976f279a586d3fe2f885e901f396ac899ed136abc7eca6",
+    "bytes": 1217
+  },
+  "code/TEMPO/src/openpi/training/weight_loaders.py": {
+    "sha256": "a54ac3222f81f8c6233241bc16b6f369c9416cdaa83f7058f96f7ddcfde1a3b4",
+    "bytes": 3738
+  },
+  "code/TEMPO/src/openpi/transforms.py": {
+    "sha256": "05e47262e2c168de3f73999a1e97d2f06aac5f20ddb3dd7ab699ac6c964be644",
+    "bytes": 17661
+  },
+  "code/TEMPO/src/openpi/transforms_test.py": {
+    "sha256": "d76f3ee8c5d7dc1c6fb6cb3b36b45ef30dd1de1ab5bc054bcb03deb79dcc06a8",
+    "bytes": 4111
+  },
+  "code/TEMPO/tools/piperx/compute_full_norm.py": {
+    "sha256": "f6e602dcbe74c713a0c7f283c38dad190b692cff8ceac8f381b10e7fdaeb0d0f",
+    "bytes": 2334
+  },
+  "code/TEMPO/tools/piperx/data.py": {
+    "sha256": "184a32dbe3c5640b17d37cbb97ccee4d6470337bb49767e5ff446f1ca373f891",
+    "bytes": 4944
+  },
+  "code/TEMPO/tools/piperx/encode.py": {
+    "sha256": "a362204f34992e0af1296e947533237c65addb195a6b5ba07997049c05ccf847",
+    "bytes": 2365
+  },
+  "code/TEMPO/tools/piperx/evaluate.py": {
+    "sha256": "3c636b224495a9417438bebe9e367b29bf15820331a7274f0e1f67a59d82fea8",
+    "bytes": 3680
+  },
+  "code/TEMPO/tools/piperx/optimizer.py": {
+    "sha256": "719238c5cb2fcaaefd95228a1266474531307e03de3d4b29c2785ddead5361b3",
+    "bytes": 4059
+  },
+  "code/TEMPO/tools/piperx/pipeline.py": {
+    "sha256": "3a5e0feeeafc23d35b81deb5a2a9a3927eb9dc2b74997d7eff3e21cac1fe4c04",
+    "bytes": 17307
+  },
+  "code/TEMPO/tools/piperx/prepare.py": {
+    "sha256": "014117f1e3e6a3924c3284bd488cfd84bcdb2293327f553467c61b674a38efb7",
+    "bytes": 4312
+  },
+  "code/TEMPO/tools/piperx/run.sh": {
+    "sha256": "5b947b1458500f2ec83c93b8e040363a3418c3f01d3313fc7d9f77eec9e62a16",
+    "bytes": 1233
+  },
+  "code/TEMPO/tools/piperx/runtime_status.py": {
+    "sha256": "f8a932c140e489b2bffc9d9296578dd2fdc2eac718e4cefbcb91cb65d125d238",
+    "bytes": 748
+  },
+  "code/TEMPO/tools/piperx/smoke_aux.py": {
+    "sha256": "4edf87022649aac878ce79f1e006e68f40a7ba17a5fe85ad06e800fc1311acca",
+    "bytes": 4147
+  },
+  "code/TEMPO/tools/piperx/train.py": {
+    "sha256": "bfc46ecdc2c0d89cda8f5293b0350d4be58cb165768bf96d65d3a2f09698446a",
+    "bytes": 16894
+  },
+  "code/TEMPO/tools/piperx/train_aux.py": {
+    "sha256": "6880f2969a9888460f1b289a687b8d150c388cb5aec0d03c4e4e46514fede392",
+    "bytes": 14462
+  },
+  "code/TEMPO/tools/piperx/upload_results.py": {
+    "sha256": "578dea16ab3c74eb6c01d4eba025be9466dc89bd29625f42a4a0d74238db6396",
+    "bytes": 16045
+  },
+  "code/TEMPO/tools/piperx/verify.py": {
+    "sha256": "2ef1ea64d8758e0c8228b7f33eb682f16724c736595f137b8632940d5b6d05cd",
+    "bytes": 3587
+  },
+  "code/TEMPO/tools/piperx/verify_checkpoint.py": {
+    "sha256": "f2ebf6764dda27a680a554a1e5d47b1c9e02fa96c3b450382251368f48206f65",
+    "bytes": 1733
+  },
+  "code/TEMPO/tools/piperx/verify_execution.py": {
+    "sha256": "a82d04e69de3f725453073a56c909e8faf1cea1cbaa7f13135f89fdbb870302a",
+    "bytes": 3642
+  },
+  "code/TEMPO/tools/piperx/wandb_proxy.py": {
+    "sha256": "8e10c1706ee7b776e3bfb5e466f6a28e5dc84adb209728aa8308a64826643df6",
+    "bytes": 3528
+  },
+  "code/TEMPO/tools/precompute_sam2_tokens.py": {
+    "sha256": "96957cc6a51caaa7c2d182dde351d44ec6284abc59a49b001a131a555e7ab865",
+    "bytes": 4309
+  },
+  "code/TEMPO/tools/sam2_encoder.py": {
+    "sha256": "402863ceeec878b39c5d7bdb0b9e48668847402aa5c4def2479b367008094c32",
+    "bytes": 4894
+  },
+  "code/TEMPO/tools/ut/data.py": {
+    "sha256": "3cae7fbfb419e4e50c227fe74cdc96b94d05a35214b5094e325961a156d06a74",
+    "bytes": 4509
+  },
+  "code/TEMPO/tools/ut/encode_ut_windows.py": {
+    "sha256": "d6c8776088f077ffe28830547a776617e81604039792956ce1e5c0f828b50e9a",
+    "bytes": 4560
+  },
+  "code/TEMPO/tools/ut/mvae.py": {
+    "sha256": "2b27bee0287345858476f652169442dc3e5f90c522d6630dd855e6ab70c4c5e3",
+    "bytes": 9749
+  },
+  "code/TEMPO/tools/ut/train_mvae.py": {
+    "sha256": "6be0083c010023f91a01bdca4dbaa088be38d015bb1d617e0e49079effd0b44e",
+    "bytes": 12367
+  },
+  "code/TEMPO/tools/ut/train_ut_decoder.py": {
+    "sha256": "cf18599d35e576bf9a77190d11778dcccf35a40db230b361fe17e2251277c7fd",
+    "bytes": 11879
+  },
+  "code/TEMPO/uv.lock": {
+    "sha256": "6840d6da313337f56805b43305d755b837d23778ae2c0e2c1ee56376af60b2bf",
+    "bytes": 821027
+  },
+  "configs/formal_chunk30_2gpu_20261114.json": {
+    "sha256": "b8240ad8dba5141a10bce3ede4b0da1f3a5fdd911ff3ce02edc82180a340231e",
+    "bytes": 2792
+  },
+  "configs/formal_chunk30_v1.json": {
+    "sha256": "0f97072d54c26361970f499b1ed2f8f15b1dd04cc90c0e042b5bf37f9bd38b3f",
+    "bytes": 1835
+  },
+  "configs/full_data_chunk30_2gpu_20261114/norm/norm_stats.json": {
+    "sha256": "af33101de961e616ebe23701d1f3d064548582920198b66060dbfcf970c8d3e5",
+    "bytes": 1868
+  },
+  "configs/full_data_chunk30_2gpu_20261114/normalization_manifest.json": {
+    "sha256": "7b8e519f3c7c2d5fdaee644ecab233de58ec6baa826c07951b9e3cf05d6a5821",
+    "bytes": 421
+  },
+  "configs/full_data_chunk30_2gpu_20261114/split.json": {
+    "sha256": "58e5ab29270a9212cfb0e6e71d6687da51524116a1ded8829eadbb9b9ef38f01",
+    "bytes": 3477
+  },
+  "configs/norm/norm_stats.json": {
+    "sha256": "d4ad0ed8d12b8eccb7f27b15d7bbd1df425c13980ad398ef35b2c8bcd2eaedf7",
+    "bytes": 1871
+  },
+  "configs/paper_restore_chunk30_2gpu_20261114.json": {
+    "sha256": "e9f8957eae10b9c310acf28aaf57c19c66c67cc3e7a74c8031b6e3f4f4de118f",
+    "bytes": 6238
+  },
+  "configs/split.json": {
+    "sha256": "a713aed7d2facda7e6bbfb3ce4bc891635863a9abe8e5a0daa4346638d93a6db",
+    "bytes": 3479
+  },
+  "docs/test_report.json": {
+    "sha256": "b9579f326222e99846eddb4957af1f54f433311a934ee6585dbb6265a052d0db",
+    "bytes": 4515
+  },
+  "docs/两卡全量训练执行方案.md": {
+    "sha256": "99103239564d306b43b51eeee178b7c44b184dc65aa5b71527f8b274a15140d2",
+    "bytes": 19042
+  },
+  "docs/实验方案.md": {
+    "sha256": "2db50ece0232c939ba54bd6ba725726b728f78c66923dcee562299c62e0e63e0",
+    "bytes": 6469
+  },
+  "handoff.md": {
+    "sha256": "aae3506747f9cafb426d8ff83145ed79ab58de480808c4d1451d0fe44d7101d9",
+    "bytes": 28487
+  },
+  "tempo_code_changes.md": {
+    "sha256": "eb5200e57f4b0d106f140dfd847c83cee59e9d610756362edc4da5f61d79e762",
+    "bytes": 31467
+  }
+}

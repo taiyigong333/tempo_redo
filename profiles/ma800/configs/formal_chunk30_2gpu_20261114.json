@@ -1,0 +1,110 @@
+{
+  "status": "authorized",
+  "project": "/data/zhoushuangfan/chuanjun_gong/tempo",
+  "experiment_root": "/data/zhoushuangfan/chuanjun_gong/tempo/experiments/formal_chunk30_2gpu_20261114",
+  "runtime_directory": "/data/zhoushuangfan/chuanjun_gong/tempo/runtime/formal_chunk30_2gpu_20261114",
+  "tmux_session": "tempo_chunk30_2gpu_20261114",
+  "gpus": [
+    1,
+    2
+  ],
+  "gpu_uuids": [
+    "GPU-c30db0fb-bf1f-603e-911c-ab38facc71bb",
+    "GPU-9b07f235-c0fb-943d-446b-0c6939574039"
+  ],
+  "gpu_probe_interval_seconds": 600,
+  "health_interval_seconds": 1800,
+  "stall_timeout_seconds": 1800,
+  "max_idle_memory_mib": 1024,
+  "max_stage_attempts": 3,
+  "split_path": "/data/zhoushuangfan/chuanjun_gong/tempo/configs/full_data_chunk30_2gpu_20261114/split.json",
+  "norm_dir": "/data/zhoushuangfan/chuanjun_gong/tempo/configs/full_data_chunk30_2gpu_20261114/norm",
+  "dataset": {
+    "train_episodes": 393,
+    "validation_episodes": 0,
+    "frames": 44398,
+    "window": 30
+  },
+  "policy": {
+    "steps": 5000,
+    "global_batch": 128,
+    "micro_batch": 32,
+    "accumulation_steps": 2,
+    "rank_samples": [
+      64,
+      64
+    ],
+    "save_interval": 2000,
+    "status_interval": 100,
+    "eval_interval": 0,
+    "warmup_steps": 500,
+    "peak_lr": 5e-05,
+    "end_lr": 5e-06,
+    "optimizer": "GPU-sharded FP32-master AdamW",
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 1e-10,
+    "clip_norm": 1.0,
+    "compact_prefix": false,
+    "checkpoint_joint_forward": false,
+    "seed": 42,
+    "workers": 4
+  },
+  "mvae": {
+    "epochs": 100,
+    "global_batch": 64,
+    "latent_dim": 64,
+    "beta": 0,
+    "window": 30
+  },
+  "decoder": {
+    "epochs": 80,
+    "global_batch": 64,
+    "window": 30
+  },
+  "wandb": {
+    "entity": "gongcj-beijing",
+    "project": "tempo-piperx-ma800",
+    "fallback_proxy": "http://127.0.0.1:17891",
+    "native_proxy": {
+      "source_directory": "/home/zhoushuangfan/clash-for-linux/runtime",
+      "work_directory": "/home/zhoushuangfan/.cache/tempo_wandb_proxy",
+      "port": 17892
+    }
+  },
+  "prediction": {
+    "measured_two_gpu": false,
+    "policy_step_seconds_range": [
+      16,
+      24
+    ],
+    "total_hours_range": [
+      24,
+      36
+    ],
+    "peak_allocated_gib_range": [
+      50,
+      65
+    ],
+    "basis": "three shared A800 GPUs measured 29.42s/update at global128 micro4; predicted two dedicated A800 GPUs at micro16 accumulation4"
+  },
+  "aux_execution": {
+    "resident_data": true,
+    "fused_adamw": true,
+    "compile_forward": true,
+    "global_batch": 64
+  },
+  "throughput_optimization": {
+    "resume_from_complete_epoch": true,
+    "precision": "float32",
+    "baseline_mvae_seconds_per_epoch": 28.0,
+    "policy_micro_batch_candidates": [
+      32,
+      16,
+      8
+    ]
+  }
+}

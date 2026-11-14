@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-14",
+  "python_version": "3.11.15",
+  "results": [
+    {
+      "branch": "main",
+      "server": "gpu-server",
+      "checks": {
+        "python": 169,
+        "shell": 6,
+        "json": 30,
+        "source_hashes": 230
+      },
+      "failures": [],
+      "source_files_match_snapshot": true,
+      "model_contract_checked": true,
+      "full_data_split_checked": true,
+      "global_batch_checked": true,
+      "checkpoint_intervals_checked": true,
+      "credential_pattern_scan_passed": true,
+      "model_sha256": {
+        "src/openpi/models/pi0_config.py": "bc19200f7d62aacaa3ee6bfbd32b4e45689d81ad2d8a5f5d4c1087ec5af06961",
+        "src/openpi/models_pytorch/pi0_pytorch.py": "d3fd6dabc1bdef852517f576cf4e56ce040c0e2cc2487b17346a0673d10e7d88"
+      },
+      "runtime_training_reexecuted": false
+    },
+    {
+      "branch": "ma800",
+      "server": "ma800",
+      "checks": {
+        "python": 172,
+        "shell": 1,
+        "json": 32,
+        "source_hashes": 479
+      },
+      "failures": [],
+      "source_files_match_snapshot": true,
+      "model_contract_checked": true,
+      "full_data_split_checked": true,
+      "global_batch_checked": true,
+      "checkpoint_intervals_checked": true,
+      "credential_pattern_scan_passed": true,
+      "model_sha256": {
+        "src/openpi/models/pi0_config.py": "bc19200f7d62aacaa3ee6bfbd32b4e45689d81ad2d8a5f5d4c1087ec5af06961",
+        "src/openpi/models_pytorch/pi0_pytorch.py": "d3fd6dabc1bdef852517f576cf4e56ce040c0e2cc2487b17346a0673d10e7d88"
+      },
+      "runtime_training_reexecuted": false
+    }
+  ],
+  "historical_validation_scripts_require_matching_experiment": true
+}

@@ -1,0 +1,102 @@
+{
+  "status": "authorized",
+  "project": "/data-minio/taiyi/tempo",
+  "experiment_root": "/data-minio/taiyi/tempo/experiments/gpu_paper_chunk30_4gpu_20261114",
+  "runtime_directory": "/data-minio/taiyi/tempo/runtime/gpu_paper_chunk30_4gpu_20261114",
+  "tmux_session": "gpu_paper_chunk30_4gpu_20261114",
+  "gpus": [
+    3,
+    4,
+    6,
+    7
+  ],
+  "gpu_uuids": [
+    "GPU-09736a3c-bd03-4169-c50e-f505516f1eaf",
+    "GPU-c236d6b7-8dc8-4c53-5492-fea8e18f971d",
+    "GPU-3f883e7b-7890-71ed-bcff-87f9dc605d20",
+    "GPU-694e9b30-05cf-c40d-c5fd-efebdfac10d3"
+  ],
+  "gpu_selection": "fixed_cuda_indices",
+  "gpu_probe_interval_seconds": 600,
+  "health_interval_seconds": 1800,
+  "stall_timeout_seconds": 3600,
+  "max_idle_memory_mib": 1024,
+  "max_stage_attempts": 3,
+  "split_path": "/data-minio/taiyi/tempo/configs/full_data_chunk30/split.json",
+  "norm_dir": "/data-minio/taiyi/tempo/configs/full_data_chunk30/norm",
+  "jax_checkpoint": "/data-minio/taiyi/base_model/openpi_cache/openpi-assets/checkpoints/pi05_base",
+  "tokenizer": "/data-minio/taiyi/base_model/openpi_cache/big_vision/paligemma_tokenizer.model",
+  "dataset": {
+    "train_episodes": 393,
+    "validation_episodes": 0,
+    "frames": 44398,
+    "window": 30
+  },
+  "policy": {
+    "steps": 5000,
+    "global_batch": 128,
+    "micro_batch": 32,
+    "accumulation_steps": 1,
+    "save_interval": 1000,
+    "status_interval": 100,
+    "eval_interval": 0,
+    "warmup_steps": 500,
+    "peak_lr": 5e-05,
+    "end_lr": 5e-06,
+    "optimizer": "torch.optim.AdamW (official native parameter/state dtypes)",
+    "cpu_offload": false,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 1e-10,
+    "clip_norm": 1,
+    "checkpoint_joint_forward": true,
+    "seed": 42,
+    "workers": 4,
+    "latest_save_interval": 100
+  },
+  "mvae": {
+    "epochs": 100,
+    "global_batch": 64,
+    "latent_dim": 64,
+    "beta": 0,
+    "window": 30
+  },
+  "decoder": {
+    "epochs": 80,
+    "global_batch": 64,
+    "window": 30
+  },
+  "wandb": {
+    "entity": "gongcj-beijing",
+    "project": "tempo-piperx-gpu-server",
+    "fallback_proxy": "http://127.0.0.1:9890",
+    "native_proxy": null
+  },
+  "require_exclusive_gpus": false,
+  "min_free_memory_mib": 50000,
+  "minimum_free_memory_mib": 68000,
+  "aux_execution": {
+    "resident_data": true,
+    "fused_adamw": true,
+    "compile_forward": true
+  },
+  "model_contract": {
+    "action_dim": 32,
+    "robot_action_dim": 7,
+    "ut_dim": 64,
+    "flow_positions": 1,
+    "action_horizon": 30,
+    "ut_window": 30,
+    "source_baseline": "dd8342a1234e7166b856ffec2d7917b51cce05e4"
+  },
+  "modelscope": {
+    "repo_id": "taiyigong3333/tempo",
+    "repo_type": "dataset",
+    "path_prefix": "gpu/gpu_paper_chunk30_4gpu_20261114",
+    "save_upload_interval": 1000,
+    "token_file": "/data-minio/taiyi/tempo/.secrets/modelscope_token"
+  }
+}

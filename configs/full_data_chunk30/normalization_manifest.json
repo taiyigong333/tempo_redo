@@ -1,0 +1,11 @@
+{
+  "updated_at": "2026-11-14T17:34:42+08:00",
+  "train_episodes": 393,
+  "val_episodes": 0,
+  "frames": 44398,
+  "window": 30,
+  "source": "/data-minio/taiyi/tempo/data/data11_7/piperx_rotating_red_square",
+  "norm_dir": "/data-minio/taiyi/tempo/configs/full_data_chunk30/norm",
+  "joint_action_space": "delta_from_window_start_state",
+  "gripper_action_space": "absolute"
+}

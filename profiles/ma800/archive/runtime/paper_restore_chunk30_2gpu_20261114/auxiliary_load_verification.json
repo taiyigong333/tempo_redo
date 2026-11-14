@@ -1,0 +1,38 @@
+[
+  {
+    "stage": "mvae",
+    "file": "best.pt",
+    "epoch_zero_based": 99,
+    "window": 30,
+    "action_dim": 7,
+    "latent_dim": 64,
+    "load": "passed"
+  },
+  {
+    "stage": "mvae",
+    "file": "last.pt",
+    "epoch_zero_based": 99,
+    "window": 30,
+    "action_dim": 7,
+    "latent_dim": 64,
+    "load": "passed"
+  },
+  {
+    "stage": "decoder",
+    "file": "best.pt",
+    "epoch_zero_based": 79,
+    "window": 30,
+    "action_dim": 7,
+    "latent_dim": 64,
+    "load": "passed"
+  },
+  {
+    "stage": "decoder",
+    "file": "last.pt",
+    "epoch_zero_based": 79,
+    "window": 30,
+    "action_dim": 7,
+    "latent_dim": 64,
+    "load": "passed"
+  }
+]

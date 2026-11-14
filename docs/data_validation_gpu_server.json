@@ -1,0 +1,15 @@
+{
+  "episodes": 393,
+  "frames": 44398,
+  "videos": 786,
+  "max_next_state_error": 0.0,
+  "sam2_shape": [
+    "T",
+    256,
+    8,
+    8
+  ],
+  "sam2_dtype": "float32",
+  "seconds": 227.64583517983556,
+  "world_size": 4
+}

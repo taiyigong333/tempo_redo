@@ -1,0 +1,20 @@
+# 训练产物与机器私有环境由服务器维护。
+/data/
+/caches/
+/experiments/
+/runtime/
+.secrets/
+.venv/
+.tools/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+._*
+.env
+.env.*
+*.pem
+*.key
+*.safetensors
+*.pt
+*.pth

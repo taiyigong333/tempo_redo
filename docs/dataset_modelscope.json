@@ -1,0 +1,13 @@
+{
+  "source": "modelscope",
+  "dataset": "taiyigong3333/piperx_rotation_red_block",
+  "archive": "/data-minio/taiyi/tempo/data/downloads/piperx_rotating_red_square_tempo.zip",
+  "archive_sha256": "53617db3f17c407244e01c5ba63e41c69734549a548b44e93d64db29fa408613",
+  "files": 1187,
+  "bytes": 67406451,
+  "sha256_inventory": "80143ff22ceb1c0a32c9c044b846bb4e283f3c49967e5b1d8219a90daa215908",
+  "episodes": 393,
+  "frames": 44398,
+  "videos": 786,
+  "zip_crc_verified": true
+}
