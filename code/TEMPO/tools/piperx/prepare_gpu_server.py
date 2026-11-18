@@ -25,11 +25,11 @@ def main():
     torch.cuda.set_device(device)
     dist.init_process_group('nccl', device_id=device)
     rank, world = dist.get_rank(), dist.get_world_size()
-    source = project/'data/data11_7/piperx_rotating_red_square'
+    source = Path(os.environ.get('TEMPO_DATASET_ROOT', project/'data/data11_7/piperx_rotating_red_square'))
     episodes = [json.loads(line) for line in (source/'meta/episodes.jsonl').read_text().splitlines()]
-    rgb = project/'caches/piperx_rgb_v1'
-    latent_dir = project/'caches/sam2_npy'
-    reports = project/'runtime/setup/episodes'
+    rgb = Path(os.environ.get('TEMPO_RGB_CACHE', project/'caches/piperx_rgb_v1'))
+    latent_dir = Path(os.environ.get('TEMPO_SAM2_CACHE', project/'caches/sam2_npy'))
+    reports = Path(os.environ.get('TEMPO_PREPARE_REPORTS', project/'runtime/setup/episodes'))
     for directory in (rgb, latent_dir, reports):
         directory.mkdir(parents=True, exist_ok=True)
     model = build_sam2_tiny(device=str(device))
@@ -39,7 +39,8 @@ def main():
         target = latent_dir/f'episode_{index:06d}.npy'
         report = reports/f'episode_{index:06d}.json'
         # 仅完整校验过的本机产物允许跳过，中断传输留下的文件会重新生成。
-        if report.is_file() and target.is_file():
+        rgb_files = [rgb/f'episode_{index:06d}'/name for name in ('head.npy', 'left_wrist.npy', 'state.npy', 'action.npy')]
+        if report.is_file() and target.is_file() and all(path.is_file() for path in rgb_files):
             array = np.load(target, mmap_mode='r')
             if array.shape == (length, 256, 8, 8):
                 continue
@@ -65,7 +66,7 @@ def main():
                    'videos': len(rows)*2, 'max_next_state_error': max(row['next_state_max_error'] for row in rows),
                    'sam2_shape': ['T', 256, 8, 8], 'sam2_dtype': 'float32',
                    'seconds': time.perf_counter()-started, 'world_size': world}
-        write_json(project/'docs/data_validation_gpu_server.json', summary)
+        write_json(Path(os.environ.get('TEMPO_VALIDATION_REPORT', project/'docs/data_validation_gpu_server.json')), summary)
         print(json.dumps(summary), flush=True)
     dist.destroy_process_group()
 

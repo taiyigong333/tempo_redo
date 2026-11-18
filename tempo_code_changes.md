@@ -36,3 +36,25 @@
 用户要求policy训练实际显存约80%，MVAE和decoder继续高吞吐。现有policy为四卡micro32、累积1、global128，独立完整策略短测峰值已分配61.80GiB每卡。实际nvidia-smi占用还包括预留显存及CUDA上下文，正式policy启动后需按实际峰值核验。
 
 本轮独立对照仅调整运行时梯度检查点标志，模型源码保持官方哈希。真实样本loss、830个梯度张量及CPU/CUDA随机状态逐元素一致。批量32关闭全部外层重算在独立测试进程中两次OOM，因此该候选未进入正式配置。正式训练继续使用现有完整重算策略。对照结果见docs/checkpoint_execution_benchmark.json。
+
+
+## 2026-11-15 完成核查与旧产物整理
+
+训练于2026-11-15 03:49:57完成5000步，最后loss为0.011362534，稳态6.585秒/步。ModelScope各1000至5000步、辅助模型和汇总材料于03:54:12前全部完成上传。已再次回读全部远端材料，大小和可获取SHA256核验通过，报告docs/completion_upload_verification_20261115.json。
+
+最终检查点仍位于 `/data-minio/taiyi/tempo/experiments/gpu_paper_chunk30_4gpu_20261114/policy/step_00005000`，包含model.safetensors、model_config、norm、split、config、共享AdamW状态和四rank随机状态。最终模型全部文件SHA256再次与上传清单一致，safetensors结构及rank状态读取通过。decoder、MVAE、u_t、数据、缓存、环境和配置保留原路径。
+
+step1000、2000、3000、4000、setup_smoke、检查点小模型验证目录及上传bundle副本已按原相对目录移入 `/data-minio/taiyi/tempo/remove`。上传完成状态保留，状态文件新增local_bundle_archive指向归档副本。移动清单位于remove/move_manifest_20261115.json，记录所有原路径与目标路径。此次使用同盘rename，文件内容与硬链接关系保留。
+
+续训使用policy/latest.json所指step5000完整状态及原四rank设置。模型部署还需model_config.json所指的decoder/best.pt、归一化和项目所需SAM2配置与分词器。当前训练效果记录属于训练指标，真实任务效果待评测。
+
+
+## 用户授权删除训练缓存与本地优化器状态（20261115_224613）
+
+已删除caches/pi05_base_pytorch、caches/piperx_rgb_v1以及最终step5000中的rank_0.pt至rank_3.pt。删除前再次回读ModelScope并逐文件核对4份rank状态的大小和SHA256。最终策略权重、model_config、norm、decoder、MVAE、u_t、SAM2特征缓存、原始数据及环境继续保留。
+
+本地step5000目录现在用于部署。恢复完整续训时，先从ModelScope数据集taiyigong3333/tempo的gpu/gpu_paper_chunk30_4gpu_20261114/policy/step_00005000/下载rank_0.pt至rank_3.pt到该目录，再从原始数据重新生成RGB缓存。RGB缓存来自数据解码，当前ModelScope实验上传内容为模型和配置。清理前核查发现原始JAX基座目录/data-minio/taiyi/base_model/openpi_cache/openpi-assets/checkpoints/pi05_base已不存在。未来需要初始PyTorch基座时，需重新下载原始基座并转换，完整step5000断点恢复使用其自身model.safetensors。
+
+数据恢复时复用tools/piperx/prepare.py中的prepare_episode函数即可重建RGB/state/action缓存。现有prepare_gpu_server.py使用已完成的SAM2报告跳过缓存，RGB删除后需要显式重建，不能仅凭SAM2完成标记推断RGB完整。
+
+项目占用从51.26GiB降至19.37GiB。清理记录为docs/cleanup_requested_20261115_224613.json。runtime/latest_status.json记录local_resume_state_available=false，训练已完成状态保留。

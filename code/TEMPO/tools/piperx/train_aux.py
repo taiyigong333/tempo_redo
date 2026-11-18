@@ -28,9 +28,11 @@ class AuxDataset(Dataset):
         self.ut_dir = ut_dir
         normalizer = Normalize(normalize.load(Path(norm_dir or project/'configs/norm')), use_quantiles=True)
         self.normalize = normalizer
+        rgb_cache = Path(os.environ.get('TEMPO_RGB_CACHE', project/'caches/piperx_rgb_v1'))
+        sam2_cache = Path(os.environ.get('TEMPO_SAM2_CACHE', project/'caches/sam2_npy'))
         for ep in episodes:
-            root = project / f'caches/piperx_rgb_v1/episode_{ep:06d}'
-            latent = np.load(project / f'caches/sam2_npy/episode_{ep:06d}.npy').mean((2, 3))
+            root = rgb_cache / f'episode_{ep:06d}'
+            latent = np.load(sam2_cache / f'episode_{ep:06d}.npy').mean((2, 3))
             action, state = np.load(root/'action.npy'), np.load(root/'state.npy')
             ut = np.load(ut_dir/f'episode_{ep:06d}.npy') if ut_dir else None
             self.values[ep] = latent, action, state, ut

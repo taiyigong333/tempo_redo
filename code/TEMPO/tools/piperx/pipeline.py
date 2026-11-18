@@ -76,6 +76,11 @@ class Pipeline:
                         NPROC_PER_NODE=str(len(self.config['gpus'])), OMP_NUM_THREADS='4',
                         JAX_PLATFORMS='cpu', NO_PROXY='localhost,127.0.0.1',
                         PYTORCH_CUDA_ALLOC_CONF='expandable_segments:True')
+        # 数据路径随实验配置传递给所有子进程和DataLoader工作进程。
+        for key, variable in (('rgb_cache', 'TEMPO_RGB_CACHE'), ('sam2_cache', 'TEMPO_SAM2_CACHE'),
+                              ('pretrained_dir', 'TEMPO_PRETRAINED_DIR')):
+            if key in self.config:
+                self.env[variable] = self.config[key]
         self.publish()
 
     def publish(self, **details):
@@ -198,7 +203,7 @@ class Pipeline:
     def complete(self, stage):
         if stage == 'encode':
             metadata = json.loads((self.root/'ut/manifest.json').read_text())
-            return metadata['episodes'] == 393 and metadata['window'] == 30 and not metadata['test_only']
+            return metadata['episodes'] == self.config['dataset']['train_episodes'] + self.config['dataset']['validation_episodes'] and metadata['window'] == 30 and not metadata['test_only']
         if stage in ('mvae', 'decoder'):
             return all((self.root/stage/file).is_file() for file in ('best.pt', 'last.pt')) and json.loads(
                 (self.root/stage/'latest_status.json').read_text())['state'] == 'completed'

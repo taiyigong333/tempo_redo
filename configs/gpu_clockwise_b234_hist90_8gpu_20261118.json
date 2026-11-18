@@ -1,0 +1,136 @@
+{
+  "status": "paused",
+  "project": "/data-minio/taiyi/tempo",
+  "experiment_root": "/data-minio/taiyi/tempo/experiments/gpu_clockwise_b234_hist90_8gpu_20261118",
+  "runtime_directory": "/data-minio/taiyi/tempo/runtime/gpu_clockwise_b234_hist90_8gpu_20261118",
+  "tmux_session": "gpu_clockwise_b234_hist90_8gpu_20261118",
+  "gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "gpu_uuids": [
+    "GPU-e8c90f02-e0c4-8e38-19eb-1ab517cee28e",
+    "GPU-90ba3ab6-9105-b145-ad92-286f48498771",
+    "GPU-1aad401a-34e8-14db-0791-0ccb342862a8",
+    "GPU-09736a3c-bd03-4169-c50e-f505516f1eaf",
+    "GPU-c236d6b7-8dc8-4c53-5492-fea8e18f971d",
+    "GPU-1de3078d-f4bf-1010-ff28-654cfc93caac",
+    "GPU-3f883e7b-7890-71ed-bcff-87f9dc605d20",
+    "GPU-694e9b30-05cf-c40d-c5fd-efebdfac10d3"
+  ],
+  "gpu_selection": "fixed_cuda_indices",
+  "gpu_probe_interval_seconds": 600,
+  "health_interval_seconds": 1800,
+  "stall_timeout_seconds": 3600,
+  "max_idle_memory_mib": 1024,
+  "max_stage_attempts": 3,
+  "split_path": "/data-minio/taiyi/tempo/configs/clockwise_b234_chunk30_20261116/split.json",
+  "norm_dir": "/data-minio/taiyi/tempo/configs/clockwise_b234_chunk30_20261116/norm",
+  "jax_checkpoint": "/data-minio/taiyi/basemodel/openpi_cache/openpi-assets/checkpoints/pi05_base",
+  "tokenizer": "/data-minio/taiyi/basemodel/openpi_cache/big_vision/paligemma_tokenizer.model",
+  "dataset": {
+    "train_episodes": 289,
+    "validation_episodes": 0,
+    "frames": 30285,
+    "window": 30
+  },
+  "policy": {
+    "steps": 5000,
+    "global_batch": 128,
+    "micro_batch": 4,
+    "accumulation_steps": 4,
+    "save_interval": 2000,
+    "status_interval": 100,
+    "eval_interval": 0,
+    "warmup_steps": 500,
+    "peak_lr": 5e-05,
+    "end_lr": 5e-06,
+    "optimizer": "torch.optim.AdamW (official native parameter/state dtypes)",
+    "cpu_offload": false,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 1e-10,
+    "clip_norm": 1,
+    "checkpoint_joint_forward": true,
+    "seed": 42,
+    "workers": 2,
+    "latest_save_interval": 100,
+    "save_steps": [
+      2000,
+      4000,
+      5000
+    ],
+    "zero_optimizer": true,
+    "adamw_foreach": false
+  },
+  "mvae": {
+    "epochs": 100,
+    "global_batch": 64,
+    "latent_dim": 64,
+    "beta": 0,
+    "window": 30
+  },
+  "decoder": {
+    "epochs": 80,
+    "global_batch": 64,
+    "window": 30
+  },
+  "wandb": {
+    "entity": "gongcj-beijing",
+    "project": "tempo-piperx-history90-8gpu-20261118",
+    "fallback_proxy": "http://127.0.0.1:9890",
+    "native_proxy": null
+  },
+  "require_exclusive_gpus": false,
+  "min_free_memory_mib": 50000,
+  "minimum_free_memory_mib": 35000,
+  "aux_execution": {
+    "resident_data": true,
+    "fused_adamw": true,
+    "compile_forward": true
+  },
+  "model_contract": {
+    "action_dim": 32,
+    "robot_action_dim": 7,
+    "ut_dim": 64,
+    "flow_positions": 1,
+    "action_horizon": 30,
+    "ut_window": 30,
+    "source_baseline": "dd8342a1234e7166b856ffec2d7917b51cce05e4",
+    "action_history_steps": 90,
+    "action_history_seconds": 3
+  },
+  "modelscope": {
+    "repo_id": "taiyigong3333/tempo",
+    "repo_type": "dataset",
+    "path_prefix": "gpu/gpu_clockwise_b234_hist90_8gpu_20261118",
+    "save_upload_interval": 2000,
+    "token_file": "/data-minio/taiyi/tempo/.secrets/modelscope_token"
+  },
+  "dataset_root": "/data-minio/taiyi/tempo/data/modelscope_clockwise_20261116/grab_rotating_red_square_clockwise_20261116",
+  "rgb_cache": "/data-minio/taiyi/tempo/caches/clockwise_b234_20261116/rgb",
+  "sam2_cache": "/data-minio/taiyi/tempo/caches/clockwise_b234_20261116/sam2",
+  "pretrained_dir": "/data-minio/taiyi/tempo/caches/pi05_base_pytorch",
+  "remove_local_after_upload": true,
+  "upload_retry_seconds": 60,
+  "reused_auxiliary_from": "/data-minio/taiyi/tempo/experiments/gpu_clockwise_b234_chunk30_4gpu_20261116",
+  "history": {
+    "source": "state",
+    "frames": 90,
+    "steps": 90,
+    "fps": 30,
+    "seconds": 3,
+    "ends_at": "t-1",
+    "bucket_frames": 1
+  },
+  "pause_reason": "ZeroRedundancyOptimizer rejects mixed FP32/BF16 parameters; user moved task to ma800 using 3 GPUs"
+}

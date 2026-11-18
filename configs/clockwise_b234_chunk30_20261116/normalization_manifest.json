@@ -1,0 +1,11 @@
+{
+  "updated_at": "2026-11-16T01:21:48+08:00",
+  "train_episodes": 289,
+  "val_episodes": 0,
+  "frames": 30285,
+  "window": 30,
+  "source": "/data-minio/taiyi/tempo/data/modelscope_clockwise_20261116/grab_rotating_red_square_clockwise_20261116",
+  "norm_dir": "/data-minio/taiyi/tempo/configs/clockwise_b234_chunk30_20261116/norm",
+  "joint_action_space": "delta_from_window_start_state",
+  "gripper_action_space": "absolute"
+}

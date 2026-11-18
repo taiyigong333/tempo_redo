@@ -1,6 +1,7 @@
 """按用户要求，用全部轨迹计算30帧动作空间统计并保存独立版本。"""
 import argparse
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -14,12 +15,12 @@ def main():
     ap.add_argument('--output', type=Path, required=True)
     args = ap.parse_args()
     project, output = args.project.resolve(), args.output.resolve()
-    source = project/'data/data11_7/piperx_rotating_red_square'
+    source = Path(os.environ.get('TEMPO_DATASET_ROOT', project/'data/data11_7/piperx_rotating_red_square'))
     episodes = [json.loads(line) for line in (source/'meta/episodes.jsonl').read_text().splitlines()]
     indices = sorted(entry['episode_index'] for entry in episodes)
     states, actions = [], []
     for index in indices:
-        directory = project/f'caches/piperx_rgb_v1/episode_{index:06d}'
+        directory = Path(os.environ.get('TEMPO_RGB_CACHE', project/'caches/piperx_rgb_v1'))/f'episode_{index:06d}'
         state = np.load(directory/'state.npy')
         action = np.load(directory/'action.npy')
         # 与正式策略相同，窗口起点六关节相对化，夹爪保持绝对开口。

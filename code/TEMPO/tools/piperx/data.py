@@ -1,6 +1,7 @@
 """无损缓存数据入口，复用官方数据变换，限制每进程 mmap 文件句柄数。"""
 from collections import OrderedDict
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -14,15 +15,25 @@ from openpi.shared import normalize
 
 
 class PiperDataset(Dataset):
-    def __init__(self, project, ut_dir, subset='train', window=30, split_path=None, norm_dir=None):
+    def __init__(self, project, ut_dir, subset='train', window=30, split_path=None, norm_dir=None,
+                 history_frames=300, history_steps=10, history_source='action'):
         self.project = Path(project)
+        # 每次实验显式选择缓存，避免相同episode编号串用旧数据。
+        self.rgb_cache = Path(os.environ.get('TEMPO_RGB_CACHE', self.project/'caches/piperx_rgb_v1'))
+        self.sam2_cache = Path(os.environ.get('TEMPO_SAM2_CACHE', self.project/'caches/sam2_npy'))
         self.ut_dir = Path(ut_dir)
         self.window = window
+        if history_frames <= 0 or history_steps <= 0 or history_frames % history_steps:
+            raise ValueError("历史帧数需为历史位置数的正整数倍")
+        if history_source not in ('state', 'action'):
+            raise ValueError("不支持的历史来源")
+        self.history_frames, self.history_steps = history_frames, history_steps
+        self.history_source = history_source
         self.maps = OrderedDict()
         split = json.loads(Path(split_path or self.project/'configs/split.json').read_text())
         self.index = []
         for ep in split[f'{subset}_episodes']:
-            length = len(np.load(self.project / f'caches/piperx_rgb_v1/episode_{ep:06d}/state.npy'))
+            length = len(np.load(self.rgb_cache / f'episode_{ep:06d}/state.npy'))
             # 保留尾帧，沿用官方 u_t padding 掩码语义。
             self.index.extend((ep, t) for t in range(length))
         self.transform = transforms.compose([
@@ -50,22 +61,24 @@ class PiperDataset(Dataset):
     def __getitem__(self, index):
         weight = np.float32(index >= 0)
         ep, t = self.index[max(index, 0)]
-        root = self.project / f'caches/piperx_rgb_v1/episode_{ep:06d}'
+        root = self.rgb_cache / f'episode_{ep:06d}'
         state, action = self.load(root / 'state.npy'), self.load(root / 'action.npy')
         frames = np.maximum(0, np.array([t-20, t-10, t]))
         images = {key: self.load(root / f'{key}.npy')[frames].copy() for key in ['head', 'left_wrist']}
-        past = np.arange(t-300, t)
+        past = np.arange(t-self.history_frames, t)
         valid = past >= 0
-        hist = np.zeros((300, 7), dtype=np.float32)
-        hist[valid] = action[past[valid]]
-        latent = self.load(self.project / f'caches/sam2_npy/episode_{ep:06d}.npy')[t]
+        hist = np.zeros((self.history_frames, 7), dtype=np.float32)
+        # 实测state历史严格截至t-1，避免下一状态代理action带入当前帧。
+        source = state if self.history_source == 'state' else action
+        hist[valid] = source[past[valid]]
+        latent = self.load(self.sam2_cache / f'episode_{ep:06d}.npy')[t]
         ut = self.load(self.ut_dir / f'episode_{ep:06d}.npy')
         data = dict(images=images, state=state[t].copy(),
                     actions=action[np.minimum(t + np.arange(self.window), len(action)-1)].copy(),
                     prompt='grab the rotating red square',
                     sam2_tokens=latent.transpose(1, 2, 0).reshape(64, 256).copy(),
-                    action_history=hist.reshape(10, 30, 7).mean(1),
-                    action_history_is_pad=(~valid).reshape(10, 30).all(1),
+                    action_history=hist.reshape(self.history_steps, self.history_frames // self.history_steps, 7).mean(1),
+                    action_history_is_pad=(~valid).reshape(self.history_steps, self.history_frames // self.history_steps).all(1),
                     ut_target=ut[t].copy() if t < len(ut) else np.zeros(64, np.float32),
                     ut_target_is_pad=np.bool_(t >= len(ut)))
         result = self.transform(data)

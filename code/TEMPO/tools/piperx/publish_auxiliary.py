@@ -26,9 +26,9 @@ for stage in ('mvae','decoder'):
     cfg=saved['model_cfg']
     assert not saved.get('test_only') and (cfg['window'],cfg['action_dim'],cfg['latent_dim'])==(30,7,64)
     (root/stage/'model_config.json').write_text(json.dumps(cfg,indent=2))
-(root/'auxiliary_usage.md').write_text('''# TEMPO辅助模型
+(root/'auxiliary_usage.md').write_text(f'''# TEMPO辅助模型
 
-在全部393条PiperX轨迹上训练，MVAE100轮，decoder80轮，动作窗口30，u_t维度64，机器人动作7维。best.pt按训练loss选择，last.pt保存末轮与优化器状态。
+在全部{config['dataset']['train_episodes']}条PiperX轨迹上训练，MVAE100轮，decoder80轮，动作窗口30，u_t维度64，机器人动作7维。best.pt按训练loss选择，last.pt保存末轮与优化器状态。
 
 MVAE的video_enc输入池化SAM2特征[B,30,256,1,1]，其均值mu_v用作策略的u_t监督。动作分支使用检查点中的action_mean和action_std。decoder用UtActionDecoder.from_pretrained加载，输入[B,64]，输出[B,30,7]。动作输出处于policy_norm空间，使用configs/norm_stats.json反归一化，并将前6维相对量加回窗口起点state，夹爪使用绝对开口。
 

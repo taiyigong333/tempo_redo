@@ -31,6 +31,11 @@ def cpu_tree(value):
     return jax.tree.map(lambda x: x.cpu() if isinstance(x, torch.Tensor) else x, value)
 
 
+def permanent_checkpoint(step, settings):
+    schedule = settings.get('save_steps')
+    return step in schedule if schedule is not None else (step % settings['save_interval'] == 0 or step == settings['steps'])
+
+
 def save_checkpoint(model, optimizer, output, step, settings, rank):
     """每个 rank 独立落盘优化器与随机状态，完成后才发布完整目录。"""
     final = output / f'step_{step:08d}'
@@ -43,6 +48,9 @@ def save_checkpoint(model, optimizer, output, step, settings, rank):
     if rank == 0 and (output / 'latest.json').is_file():
         previous = json.loads((output / 'latest.json').read_text())
     # DDP各rank持有相同的标准AdamW状态，只保存一份以降低周期性落盘成本。
+    if settings.get('zero_optimizer', False):
+        # 分片AdamW在保存时汇总CPU状态，仍使用兼容的rank0共享优化器格式。
+        optimizer.consolidate_state_dict(to=0)
     state = {'checkpoint_format_version': 2, 'optimizer_state_rank': 0, 'step': step,
              'torch_rng': torch.get_rng_state(), 'cuda_rng': torch.cuda.get_rng_state(),
              'numpy_rng': np.random.get_state(), 'python_rng': random.getstate(), 'settings': settings}
@@ -67,7 +75,7 @@ def save_checkpoint(model, optimizer, output, step, settings, rank):
         # 新快照完整发布后才清理上一个滚动版本，千步检查点永久保留。
         if previous is not None:
             old = Path(previous['path'])
-            keep = previous['step'] % settings['save_interval'] == 0 or previous['step'] == settings['steps']
+            keep = permanent_checkpoint(previous['step'], settings)
             if not keep and old.parent == output and old.name == f"step_{previous['step']:08d}":
                 try:
                     shutil.rmtree(old)
@@ -98,10 +106,20 @@ def main():
     ap.add_argument('--no-save', action='store_true')
     ap.add_argument('--mode', choices=['preflight', 'formal'], default='preflight')
     ap.add_argument('--resume', type=Path)
+    ap.add_argument('--history-frames', type=int, default=300)
+    ap.add_argument('--history-steps', type=int, default=10)
+    ap.add_argument('--history-source', choices=['action', 'state'], default='action')
+    ap.add_argument('--save-steps', type=int, nargs='+')
+    ap.add_argument('--zero-optimizer', action='store_true')
+    ap.add_argument('--adamw-foreach', choices=['auto', 'false'], default='auto')
     ap.add_argument('--wandb-mode', choices=['online', 'offline'], default='online')
     args = ap.parse_args()
     if args.save_interval <= 0 or args.latest_save_interval <= 0:
         raise ValueError('检查点保存间隔必须大于0')
+    if args.history_frames <= 0 or args.history_steps <= 0 or args.history_frames % args.history_steps:
+        raise ValueError('历史帧数与位置数不兼容')
+    if args.save_steps is not None and any(step <= 0 or step > args.steps for step in args.save_steps):
+        raise ValueError('固定保存步数需位于本次训练范围内')
     # 测试入口限定更新数，正式运行要求显式选择 formal。
     if args.mode == 'preflight' and args.steps > 20:
         raise ValueError('preflight 最多20次更新')
@@ -132,7 +150,7 @@ def main():
     settings.update(world_size=world, window=30, precision='official mixed parameter dtypes + BF16 autocast',
                     optimizer='torch.optim.AdamW (official native parameter/state dtypes)', peak_lr=5e-5, end_lr=5e-6, warmup=500,
                     decay_steps=5000, betas=[.9, .95], eps=1e-8, weight_decay=1e-10,
-                    clip_norm=1., seed=42)
+                    clip_norm=1., seed=42, action_history_seconds=args.history_frames/30, history_bucket_frames=args.history_frames//args.history_steps)
     run = None
     if rank == 0:
         id_path = output / 'wandb_id.txt'
@@ -147,7 +165,7 @@ def main():
     config = Pi0Config(pi05=True, dtype='bfloat16', action_horizon=30, obs_history=3,
                        obs_history_stride_s=.333, temporal_attn_period=4,
                        use_sam2_fusion=True, sam2_token_dim=256, sam2_num_tokens=64,
-                       use_action_history=True, action_history_steps=10, action_history_dim=7,
+                       use_action_history=True, action_history_steps=args.history_steps, action_history_dim=7,
                        predict_ut=True, ut_dim=64, ut_window=30,
                        ut_decoder_path=str(args.decoder.resolve()) if args.decoder else None)
     # 显式核对复现约定，避免数据适配意外改动模型输出空间。
@@ -159,7 +177,7 @@ def main():
     if args.resume:
         safetensors.torch.load_model(model, args.resume / 'model.safetensors')
     else:
-        weights = safetensors.torch.load_file(project / 'caches/pi05_base_pytorch/model.safetensors')
+        weights = safetensors.torch.load_file(Path(os.environ.get('TEMPO_PRETRAINED_DIR', project/'caches/pi05_base_pytorch')) / 'model.safetensors')
         own = model.state_dict()
         resized = [k for k, v in weights.items() if k in own and v.shape != own[k].shape]
         for key in resized:
@@ -175,9 +193,17 @@ def main():
     # 直接使用官方 AdamW 与模型原始参数精度，训练状态驻留 GPU。
     # Expert的词表输出头不参与策略前向，冻结后可省去无用DDP梯度桶。
     model.paligemma_with_expert.gemma_expert.lm_head.requires_grad_(False)
-    optimizer = torch.optim.AdamW(
+    optimizer_class = torch.optim.AdamW
+    optimizer_options = {}
+    if args.adamw_foreach == 'false':
+        optimizer_options['foreach'] = False
+    if args.zero_optimizer:
+        from torch.distributed.optim import ZeroRedundancyOptimizer
+        optimizer_class = ZeroRedundancyOptimizer
+        optimizer_options['optimizer_class'] = torch.optim.AdamW
+    optimizer = optimizer_class(
         model.parameters(),
-        lr=5e-5, betas=(.9, .95), eps=1e-8, weight_decay=1e-10,
+        lr=5e-5, betas=(.9, .95), eps=1e-8, weight_decay=1e-10, **optimizer_options,
     )
     ddp = DistributedDataParallel(model, device_ids=[device.index], find_unused_parameters=True,
                                   gradient_as_bucket_view=True, broadcast_buffers=False)
@@ -199,8 +225,9 @@ def main():
         random.setstate(state['python_rng'])
     else:
         torch.manual_seed(42+rank)
-    dataset = PiperDataset(project, args.ut_dir, split_path=args.split_path, norm_dir=args.norm_dir)
-    validation = PiperDataset(project, args.ut_dir, subset='val', split_path=args.split_path, norm_dir=args.norm_dir) if args.eval_interval > 0 else None
+    history_options = dict(history_frames=args.history_frames, history_steps=args.history_steps, history_source=args.history_source)
+    dataset = PiperDataset(project, args.ut_dir, split_path=args.split_path, norm_dir=args.norm_dir, **history_options)
+    validation = PiperDataset(project, args.ut_dir, subset='val', split_path=args.split_path, norm_dir=args.norm_dir, **history_options) if args.eval_interval > 0 else None
     sampler = ExactBatchSampler(len(dataset), args.batch, args.micro_batch, rank, world, start_step, args.steps)
     loader = DataLoader(dataset, batch_sampler=sampler, num_workers=args.workers, pin_memory=True,
                         persistent_workers=args.workers > 0, **({'prefetch_factor': 2, 'multiprocessing_context': 'spawn'} if args.workers else {}))
@@ -279,7 +306,7 @@ def main():
                 model.train()
             dist.barrier()
         if not args.no_save and ((step+1)%args.latest_save_interval == 0
-                                 or (step+1)%args.save_interval == 0 or step+1 == args.steps):
+                                 or permanent_checkpoint(step+1, settings) or step+1 == args.steps):
             elapsed, checkpoint = save_checkpoint(model, optimizer, output, step+1, settings, rank)
             if rank == 0:
                 wandb.log({'checkpoint_seconds': elapsed}, step=step+1)

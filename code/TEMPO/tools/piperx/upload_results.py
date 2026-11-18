@@ -37,6 +37,8 @@ def checkpoint_steps(config):
     # 保存与上传共享配置，并始终包含最终步，避免更改间隔后漏传。
     policy = config['policy']
     total, interval = int(policy['steps']), int(policy.get('save_interval', 2000))
+    if policy.get('save_steps') is not None:
+        return tuple(sorted(set(map(int, policy['save_steps'])) | {total}))
     if total <= 0 or interval <= 0:
         raise ValueError('训练步数和保存间隔必须大于0')
     return tuple(range(interval, total, interval)) + (total,)
@@ -85,6 +87,10 @@ class Publisher:
             if pointer['step'] < max(steps):
                 return False
             for step in steps:
+                published = self.work / f'step_{step:08d}' / 'latest_status.json'
+                if (self.step is None and self.config.get('remove_local_after_upload') and published.exists()
+                        and json.loads(published.read_text()).get('state') == 'completed'):
+                    continue
                 checkpoint = self.root / 'policy' / f'step_{step:08d}'
                 for name in ['model.safetensors', 'model_config.json', 'config.json', 'norm_stats.json', 'split.json'] + [
                         f'rank_{rank}.pt' for rank in range(len(self.config['gpus']))]:
@@ -172,8 +178,8 @@ class Publisher:
             add(self.project / 'code/TEMPO' / relative, Path('source') / relative)
         readme = '\n'.join([
             '# TEMPO PiperX 全量微调结果', '',
-            '本次实验使用全部393条轨迹、44398帧，预测chunk为30。',
-            'π0.5与TEMPO策略全量微调，CUDA '+','.join(map(str,self.config['gpus']))+'，有效batch128，共5000个优化器更新。',
+            f"本次实验使用{self.config['dataset']['train_episodes']}条训练轨迹、{self.config['dataset']['frames']}帧，预测chunk为{self.config['dataset']['window']}。",
+            'π0.5与TEMPO策略全量微调，CUDA '+','.join(map(str,self.config['gpus']))+f"，有效batch{self.config['policy']['global_batch']}，共{self.config['policy']['steps']}个优化器更新。",
             'policy目录保存第' + '、'.join(map(str, checkpoint_steps(self.config)))
             + '步的完整模型、共享优化器状态与各rank、随机状态及归一化配置。',
             'mvae和decoder目录包含辅助模型，configs、logs和manifest.json记录训练配置、指标与文件校验信息。',
@@ -239,11 +245,49 @@ class Publisher:
             item = remote.get(key)
             if item is None or item.size != entry['size']:
                 raise RuntimeError('远端文件缺失或大小不匹配 ' + key)
-            if item.sha256 and item.sha256.lower() != entry['sha256']:
+            if not item.sha256 or item.sha256.lower() != entry['sha256']:
                 raise RuntimeError('远端SHA256不匹配 ' + key)
         self.status('completed', verified_files=len(manifest['files']) + 1,
                     dataset_url='https://www.modelscope.cn/datasets/' + self.repo_id,
                     manifest_sha256=digest(self.bundle / 'manifest.json'))
+
+    def cleanup_uploaded_checkpoint(self):
+        if self.step is None or not self.config.get('remove_local_after_upload'):
+            return
+        manifest = json.loads((self.bundle/'manifest.json').read_text())
+        status_path = self.work/'latest_status.json'
+        result = json.loads(status_path.read_text())
+        if result.get('local_checkpoint_removed'):
+            return
+        assert result['state'] == 'completed'
+        # 节点同时是最新checkpoint时，先等下一滚动快照接管，或等待训练结束。
+        while True:
+            pointer = json.loads((self.root/'policy/latest.json').read_text())
+            progress = json.loads((self.root/'policy/latest_status.json').read_text())
+            if pointer['step'] > self.step or progress['state'] in ('completed', 'failed'):
+                break
+            time.sleep(10)
+        checkpoint = self.root/'policy'/f'step_{self.step:08d}'
+        candidates = []
+        for row in manifest['files']:
+            relative = Path(row['path'])
+            assert not relative.is_absolute() and '..' not in relative.parts
+            if relative.suffix not in ('.pt', '.safetensors'):
+                continue
+            for root in (checkpoint, self.bundle):
+                path = root/relative
+                if path.exists():
+                    assert not path.is_symlink() and path.stat().st_size == row['size']
+                    candidates.append(path)
+        # 所有文件已由upload逐个验真，完成后解除训练目录和硬链接发布副本。
+        for path in candidates:
+            path.unlink()
+        result.update(local_checkpoint_removed=True, local_removed_at=timestamp(),
+                      removed_weight_paths=[str(path) for path in candidates])
+        write_json(status_path, result)
+        if pointer['step'] == self.step:
+            pointer.update(local_available=False, modelscope_path=self.prefix, repository=self.repo_id)
+            write_json(self.root/'policy/latest.json', pointer)
 
     def run(self, check_only=False):
         if check_only:
@@ -256,20 +300,31 @@ class Publisher:
             return
         result = self.work / 'latest_status.json'
         if result.exists() and json.loads(result.read_text()).get('state') == 'completed':
+            self.cleanup_uploaded_checkpoint()
             return
         self.status('waiting_for_checkpoint' if self.step is not None else 'waiting_for_training')
         while not self.complete():
             time.sleep(60)
         while True:
             try:
-                self.upload()
+                current = json.loads(result.read_text()) if result.exists() else {}
+                if current.get('state') != 'completed':
+                    self.upload()
+                self.cleanup_uploaded_checkpoint()
                 return
             except Exception as error:
                 # 上传与网络重试独立于训练进程，训练状态始终保留在GPU。
-                self.status('retrying', error_type=type(error).__name__, retry_after_seconds=1800)
-                logging.error('上传未完成，异常类型 %s，30分钟后重试', type(error).__name__)
-                for _ in range(30):
-                    time.sleep(60)
+                delay = int(self.config.get('upload_retry_seconds', 1800))
+                current = json.loads(result.read_text()) if result.exists() else {}
+                if current.get('state') == 'completed':
+                    current.update(cleanup_error_type=type(error).__name__, cleanup_retry_after_seconds=delay)
+                    write_json(result, current)
+                else:
+                    self.status('retrying', error_type=type(error).__name__, retry_after_seconds=delay)
+                logging.error('发布或清理尚未完成，异常类型 %s，%d秒后重试', type(error).__name__, delay)
+                deadline = time.monotonic() + delay
+                while time.monotonic() < deadline:
+                    time.sleep(min(60, deadline-time.monotonic()))
 
 
 def main():

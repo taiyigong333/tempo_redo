@@ -29,7 +29,7 @@ def main():
     model = PoEMVAE(cfg).to(device).eval()
     model.load_state_dict(saved['model'])
     output.mkdir(parents=True, exist_ok=True)
-    files = sorted((project/'caches/sam2_npy').glob('episode_*.npy'))
+    files = sorted(Path(os.environ.get('TEMPO_SAM2_CACHE', project/'caches/sam2_npy')).glob('episode_*.npy'))
     begin = time.perf_counter()
     with torch.no_grad():
         for source in files[rank::world]:
